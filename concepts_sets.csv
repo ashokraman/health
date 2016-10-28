@@ -1,0 +1,6 @@
+uuid,name,description,class,shortname,child.1,child.2,child.3,child.4,child.5,child.6,child.7,reference-term-source,reference-term-code,reference-term-relationship
+1792ce70-9cfc-11e6-9ca5-083e8ecc6d28,Baseline Treatment History,,Misc,,Whether treated for Filariasis,Alternative systems tried,If so which one?,Practising yoga/physical exercise,If so give details,Special washing of the limb practiced everyday,If so give details,,,
+1792ce71-9cfc-11e6-8b65-083e8ecc6d28,Baseline Past History,,Misc,,First diagnosis: Year and place,Investigation used for confirmation,"First Episode of ""Filiarial Fever""","Last Episode of ""Filiarial Fever""",Frequence of fever and redness of limb,Medicines used to control inflammatory episode,Routine DEC consumption,,,
+1792ce72-9cfc-11e6-b8c8-083e8ecc6d28,Details of Entry points,,Misc,,Ulcers,Intertrigo,Folliculitis,Excoriation,Eczema,Paronychia,Fissures,,,
+1792f4b0-9cfc-11e6-8c38-083e8ecc6d28,Baseline Treatment Details,,Misc,,Year,Name and address of institution,Nature of treatment,Success Rate,Drugs and Dosage,Any other relevant information,,,,
+1792f4b1-9cfc-11e6-a073-083e8ecc6d28,History of past Surgery,,Misc,,For Filariasis,For other complaints,Any other relevant complaints,"Others, explain",Engorged Veins,Lower Limbs affected,Size of Limb,,,
