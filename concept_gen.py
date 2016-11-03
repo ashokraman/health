@@ -54,7 +54,7 @@ def single(row, writer, name, datatype, wcount, concept_list, concepts_dict_list
             if name not in concept_list :
                 wcount = wcount + 1
                 concept_list.append(name)
-                writer.writerow({'uuid':uuid.uuid1(),'name':name,'class':'Misc','datatype':datatype})        
+                writer.writerow({'uuid':uuid.uuid1(),'name':name,'class':'Misc','datatype':datatype,'High Normal':High_Normal,'Low Normal':Low_Normal})        
     return wcount, concept_list
 
 def get_concepts_list(dictionary_file):
@@ -77,6 +77,10 @@ def main(argv):
     except getopt.GetoptError:
         print ('concept_gen.py -i <inputfile> -o <outputfile> -d <concept_dictionaryfile>')
         sys.exit(2)
+    if len(opts) <= 2:
+        print ('concept_gen.py -i <inputfile> -o <outputfile> -d <concept_dictionaryfile>')
+        sys.exit()
+
     for opt, arg in opts:
         if opt == '-h':
             print ('concept_gen.py -i <inputfile> -o <outputfile> -d <concept_dictionaryfile>')
@@ -136,9 +140,14 @@ def main(argv):
                     if item[0] not in concept_list:
                         wcount = wcount + 1
                         concept_list.append(item)
-                        child_1 = item[1][0] if item[1][0] else ""
+                        child_1 = item[1][0] if len(item[1]) > 0 else ""
+                        child_2 = item[1][1] if len(item[1]) > 1 else ""
+                        child_3 = item[1][2] if len(item[1]) > 2 else ""
+                        child_4 = item[1][3] if len(item[1]) > 3 else ""
+                        child_5 = item[1][4] if len(item[1]) > 4 else ""
+                        child_6 = item[1][5] if len(item[1]) > 5 else ""
                         child_7 = "" if len(item[1]) <= 6 else item[1][6]
-                        writer_set.writerow({'uuid':uuid.uuid1(),'name':item[0],'class':'Misc','child.1':item[1][0],'child.2':item[1][1],'child.3':item[1][2],'child.4':item[1][3],'child.5':item[1][4],'child.6':item[1][5],'child.7':child_7})        
+                        writer_set.writerow({'uuid':uuid.uuid1(),'name':item[0],'class':'Misc','child.1':child_1,'child.2':child_2,'child.3':child_3,'child.4':child_4,'child.5':child_5,'child.6':child_6,'child.7':child_7})        
             
             
             print ("Read records: " + str(rcount), "Wrote: " + str(wcount), "Concepts: " + str(len(concept_list)))
