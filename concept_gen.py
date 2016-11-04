@@ -49,6 +49,8 @@ def single(row, writer, name, datatype, wcount, concept_list, concepts_dict_list
     reference_term_source  = row['reference-term-source']
     reference_term_code  = row['reference-term-code']
     reference_term_relationship  = row['reference-term-relationship']
+    if datatype == '':
+        datatype = 'Text'
     if name != '':
         if name not in concepts_dict_list:
             if name not in concept_list :
@@ -57,14 +59,15 @@ def single(row, writer, name, datatype, wcount, concept_list, concepts_dict_list
                 writer.writerow({'uuid':uuid.uuid1(),'name':name,'class':'Misc','datatype':datatype,'High Normal':High_Normal,'Low Normal':Low_Normal})        
     return wcount, concept_list
 
-def get_concepts_list(dictionary_file):
+def get_concepts_list(dictionary_file_list):
     # file_data is the text of the file, not the filename
     concepts_dict_list = []
-    with open(dictionary_file, encoding="utf8") as in_csvfile:
-        reader = csv.DictReader(in_csvfile, quotechar='"')    
-#        reader = csv.DictReader(dictionary_file, ('Concept Id','Name','Description','Synonyms','Answers','Set Members','Class','Datatype','Changed By','Creator'))
-        for row in reader:
-            concepts_dict_list.append(row['Name'])
+    for dictionary_file in dictionary_file_list.split(':'):
+        with open(dictionary_file, encoding="utf8") as in_csvfile:
+            reader = csv.DictReader(in_csvfile, quotechar='"')    
+    #        reader = csv.DictReader(dictionary_file, ('Concept Id','Name','Description','Synonyms','Answers','Set Members','Class','Datatype','Changed By','Creator'))
+            for row in reader:
+                concepts_dict_list.append(row['Name'] if 'Name' in row else row['name'])
 
     return concepts_dict_list
 
