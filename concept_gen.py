@@ -137,7 +137,13 @@ def main(argv):
                         wcount, concept_list = coded(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
                     else:
                         wcount, concept_list = single(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
-
+                else:
+                    if datatype == 'Block':
+                        alist = row['synonym.1']
+                        clist = alist.split(',')
+                        if len(clist) > 0:
+                            block[name] = clist
+                
             for item in block.items():
                 if item[0] not in concepts_dict_list:
                     if item[0] not in concept_list:
