@@ -22,6 +22,7 @@ def coded(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
     answer_10  = row['answer.10']
     answer_11  = row['answer.11']
     answer_12  = row['answer.12']
+    cl = row['class'] if 'class' in row else 'Misc'    
     reference_term_source  = row['reference-term-source']
     reference_term_code  = row['reference-term-code']
     reference_term_relationship  = row['reference-term-relationship']
@@ -32,11 +33,11 @@ def coded(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
                     if answer not in concept_list:
                         wcount = wcount + 1
                         concept_list.append(answer)
-                        writer.writerow({'uuid':uuid.uuid1(),'name':answer,'class':'Misc','datatype':'N/A'})
+                        writer.writerow({'uuid':uuid.uuid1(),'name':answer,'class':cl,'datatype':'N/A'})
         if name not in concept_list:
             wcount = wcount + 1
             concept_list.append(name)
-            writer.writerow({'uuid':uuid.uuid1(),'name':name,'class':'Misc','datatype':datatype,'answer.1':answer_1,'answer.2':answer_2,'answer.3':answer_3,'answer.4':answer_4,'answer.5':answer_5,'answer.6':answer_6,'answer.7':answer_7,'answer.8':answer_8,'answer.9':answer_9,'answer.10':answer_10})        
+            writer.writerow({'uuid':uuid.uuid1(),'name':name,'class':cl,'datatype':datatype,'answer.1':answer_1,'answer.2':answer_2,'answer.3':answer_3,'answer.4':answer_4,'answer.5':answer_5,'answer.6':answer_6,'answer.7':answer_7,'answer.8':answer_8,'answer.9':answer_9,'answer.10':answer_10})        
     return wcount, concept_list
 
 def single(row, writer, name, datatype, wcount, concept_list, concepts_dict_list):
@@ -56,7 +57,8 @@ def single(row, writer, name, datatype, wcount, concept_list, concepts_dict_list
             if name not in concept_list :
                 wcount = wcount + 1
                 concept_list.append(name)
-                writer.writerow({'uuid':uuid.uuid1(),'name':name,'class':'Misc','datatype':datatype,'High Normal':High_Normal,'Low Normal':Low_Normal})        
+                cl = row['class'] if 'class' in row else 'Misc'
+                writer.writerow({'uuid':uuid.uuid1(),'name':name,'class':cl,'datatype':datatype,'High Normal':High_Normal,'Low Normal':Low_Normal})        
     return wcount, concept_list
 
 def get_concepts_list(dictionary_file_list):
@@ -133,16 +135,11 @@ def main(argv):
                         clist = [name]
                         block[Parent] = clist
                     
-                    if datatype == 'Coded':
-                        wcount, concept_list = coded(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
-                    else:
-                        wcount, concept_list = single(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
+                if datatype == 'Coded':
+                    wcount, concept_list = coded(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
                 else:
-                    if datatype == 'Block':
-                        alist = row['synonym.1']
-                        clist = alist.split(',')
-                        if len(clist) > 0:
-                            block[name] = clist
+                    wcount, concept_list = single(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
+                            
                 
             for item in block.items():
                 if item[0] not in concepts_dict_list:
