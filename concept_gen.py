@@ -142,17 +142,17 @@ def main(argv):
                         wcount, concept_list = single(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
 
                 if row['class'] == 'Concept Details':
-                    wcount = wcount + 1
-                    concept_list.append(name)
-                    child_1 = row['child.1'] if len(row['child.1']) > 0 else ""
-                    child_2 = row['child.2'] if len(row['child.2']) > 0 else ""
-                    child_3 = row['child.3'] if len(row['child.3']) > 0 else ""
-                    child_4 = row['child.4'] if len(row['child.4']) > 0 else ""
-                    child_5 = row['child.5'] if len(row['child.5']) > 0 else ""
-                    child_6 = row['child.6'] if len(row['child.6']) > 0 else ""
-                    child_7 = row['child.7'] if len(row['child.7']) > 0 else ""
-                    writer_set.writerow({'uuid':uuid.uuid1(),'name':name,'class':'Concept Details','child.1':child_1,'child.2':child_2,'child.3':child_3,'child.4':child_4,'child.5':child_5,'child.6':child_6,'child.7':child_7})        
-                        
+                    if name not in concepts_dict_list+concept_list:                
+                        wcount = wcount + 1
+                        concept_list.append(name)
+                        child_1 = row['child.1'] if len(row['child.1']) > 0 else ""
+                        child_2 = row['child.2'] if len(row['child.2']) > 0 else ""
+                        child_3 = row['child.3'] if len(row['child.3']) > 0 else ""
+                        child_4 = row['child.4'] if len(row['child.4']) > 0 else ""
+                        child_5 = row['child.5'] if len(row['child.5']) > 0 else ""
+                        child_6 = row['child.6'] if len(row['child.6']) > 0 else ""
+                        child_7 = row['child.7'] if len(row['child.7']) > 0 else ""
+                        writer_set.writerow({'uuid':uuid.uuid1(),'name':name,'class':'Concept Details','child.1':child_1,'child.2':child_2,'child.3':child_3,'child.4':child_4,'child.5':child_5,'child.6':child_6,'child.7':child_7})                        
                 
             for item in block.items():
                 if item[0] not in concepts_dict_list:
