@@ -3,6 +3,8 @@ import sys, getopt
 import uuid
 import copy
 from datetime import datetime
+from collections import OrderedDict
+
 def date(datestr="", format="%Y%m%d"):
     if not datestr:
         return datetime.today().date()
@@ -99,7 +101,7 @@ def main(argv):
     print ('Concept Dictionary file is ', concept_dictionaryfile, ' Input file is ', inputfile)
     ofile = outputfile.split(".")
     ofile1 = ofile[0]+".csv"
-    ofile2 = ofile[0]+"_sets.csv"
+    ofile2 = ofile[0]+"_set.csv"
     print ('Output file is ', ofile1, ' sets: ', ofile2)
    
     # read in the conceptDictionary as concepts
@@ -112,7 +114,7 @@ def main(argv):
         fieldnames = ["uuid","name","description","class","shortname","datatype","units","High Normal","Low Normal","Allow Decimal","locale","synonym.1","answer.1","answer.2","answer.3","answer.4","answer.5","answer.6","answer.7","answer.8","answer.9","answer.10","answer.11","answer.12","reference-term-source","reference-term-code","reference-term-relationship"]
         writer = csv.DictWriter(concepts_csvfile, fieldnames=fieldnames, lineterminator='\n')
         writer.writeheader()
-        fieldnames = ["uuid","name","description","class","shortname","child.1","child.2","child.3","child.4","child.5","child.6","child.7","reference-term-source","reference-term-code","reference-term-relationship"]
+        fieldnames = ["uuid","name","description","class","shortname","child.1","child.2","child.3","child.4","child.5","child.6","child.7","child.8","child.9","child.10","reference-term-source","reference-term-code","reference-term-relationship"]
         concepts_set_csvfile = open(ofile2, 'w')
         writer_set = csv.DictWriter(concepts_set_csvfile, fieldnames=fieldnames, lineterminator='\n')
         writer_set.writeheader()
@@ -121,7 +123,7 @@ def main(argv):
         concept_list = []
         with open(inputfile) as in_csvfile:
             reader = csv.DictReader(in_csvfile, quotechar='"')
-            block = {}
+            block = OrderedDict()
             for row in reader:
                 rcount = rcount+1
                 Parent  = row['Parent']
@@ -137,6 +139,11 @@ def main(argv):
                     
                 if datatype == 'Coded':
                     wcount, concept_list = coded(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
+                elif datatype == 'Block':
+                        alist = row['synonym.1']
+                        clist = alist.split(',')
+                        if len(clist) > 0:
+                            block[name] = clist
                 else:
                     if datatype != '':
                         wcount, concept_list = single(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
@@ -152,9 +159,13 @@ def main(argv):
                         child_5 = row['child.5'] if len(row['child.5']) > 0 else ""
                         child_6 = row['child.6'] if len(row['child.6']) > 0 else ""
                         child_7 = row['child.7'] if len(row['child.7']) > 0 else ""
-                        writer_set.writerow({'uuid':uuid.uuid1(),'name':name,'class':'Concept Details','child.1':child_1,'child.2':child_2,'child.3':child_3,'child.4':child_4,'child.5':child_5,'child.6':child_6,'child.7':child_7})                        
+                        child_8 = row['child.8'] if len(row['child.8']) > 0 else ""
+                        child_9 = row['child.9'] if len(row['child.9']) > 0 else ""
+                        child_10 = row['child.10'] if len(row['child.10']) > 0 else ""
+                        writer_set.writerow({'uuid':uuid.uuid1(),'name':name,'class':'Concept Details','child.1':child_1,'child.2':child_2,'child.3':child_3,'child.4':child_4,'child.5':child_5,'child.6':child_6,'child.7':child_7,'child.8':child_8,'child.9':child_9,'child.10':child_10})                        
                 
             for item in block.items():
+#                print("Item: " + str(item))
                 if item[0] not in concepts_dict_list:
                     if item[0] not in concept_list:
                         wcount = wcount + 1
@@ -166,7 +177,10 @@ def main(argv):
                         child_5 = item[1][4] if len(item[1]) > 4 else ""
                         child_6 = item[1][5] if len(item[1]) > 5 else ""
                         child_7 = "" if len(item[1]) <= 6 else item[1][6]
-                        writer_set.writerow({'uuid':uuid.uuid1(),'name':item[0],'class':'Misc','child.1':child_1,'child.2':child_2,'child.3':child_3,'child.4':child_4,'child.5':child_5,'child.6':child_6,'child.7':child_7})        
+                        child_8 = "" if len(item[1]) <= 7 else item[1][7]
+                        child_9 = "" if len(item[1]) <= 8 else item[1][8]
+                        child_10 = "" if len(item[1]) <= 9 else item[1][9]
+                        writer_set.writerow({'uuid':uuid.uuid1(),'name':item[0],'class':'Misc','child.1':child_1,'child.2':child_2,'child.3':child_3,'child.4':child_4,'child.5':child_5,'child.6':child_6,'child.7':child_7,'child.8':child_8,'child.9':child_9,'child.10':child_10})        
             
             
             print ("Read records: " + str(rcount), "Wrote: " + str(wcount), "Concepts: " + str(len(concept_list)))
