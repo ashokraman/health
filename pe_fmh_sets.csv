@@ -1,0 +1,5 @@
+uuid,name,description,class,shortname,child.1,child.2,child.3,child.4,child.5,child.6,child.7,reference-term-source,reference-term-code,reference-term-relationship
+a64204d8-abc8-11e6-9869-083e8ecc6d28,Duration,,Concept Details,,Medication name,Non-Coded Chief Complaint,Chief Complaint Duration,,,,,,,
+a6425306-abc8-11e6-9ac6-083e8ecc6d28,Physical Examination at baseline,,Misc,,General Examination,Systemic Examination,,,,,,,,
+a6425307-abc8-11e6-b155-083e8ecc6d28,Photo documentation,,Misc,,View,Image,Others/Discussed,,,,,,,
+a6425308-abc8-11e6-9bd4-083e8ecc6d28,Medical History,,Misc,,Mode of treatment,Medication name,Duration,Outcome,,,,,,

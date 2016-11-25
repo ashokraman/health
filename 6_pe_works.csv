@@ -1,0 +1,12 @@
+Parent,name,class,datatype,units,High Normal,Low Normal,Allow Decimal,locale,synonym.1,answer.1,answer.2,answer.3,answer.4,answer.5,answer.6,answer.7,answer.8,answer.9,answer.10,answer.11,answer.12,shortname,child.1,child.2,child.3,child.4,child.5,child.6,child.7,reference-term-source,reference-term-code,reference-term-relationship
+Education on treatment,BEP/treatment demo,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Education on treatment,Hair and nail parrying demo,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Education on treatment,Treatment procedure in sequence (FGD),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Education on treatment,ADLA care demo / class,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Education on treatment,Yoga sequence discussion,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Education on treatment,Skin care demo / class,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Education on treatment,Preperation of phanta demo,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Education on treatment,Disinfection method demo / class,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Education on treatment,Washing compression bandage demo,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Education on treatment,Approver,Misc,Text,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ ,Patient education workshops,Misc,Block,,,,,,Education on treatment,,,,,,,,,,,,,,,,,,,,,,,

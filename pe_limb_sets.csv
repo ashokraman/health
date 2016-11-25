@@ -1,0 +1,13 @@
+uuid,name,description,class,shortname,child.1,child.2,child.3,child.4,child.5,child.6,child.7,child.8,child.9,child.10,reference-term-source,reference-term-code,reference-term-relationship
+d0ce7e48-acdb-11e6-a707-083e8ecc6d28,Limb Length from ASIS to ground,,Misc,,Distance from ASIS ,Right,Left,,,,,,,,,,
+d0ce91ca-acdb-11e6-be36-083e8ecc6d28,Foot Length from medial side,,Misc,,Distance from ASIS ,Right,Left,,,,,,,,,,
+d0cea55a-acdb-11e6-bbaf-083e8ecc6d28,Maximum calf bulk,,Misc,,Distance from ASIS ,Right,Left,,,,,,,,,,
+d0cea55b-acdb-11e6-b463-083e8ecc6d28,Mid thigh,,Misc,,Distance from ASIS ,Right,Left,,,,,,,,,,
+d0ceb8e4-acdb-11e6-a113-083e8ecc6d28,Patellar region,,Misc,,Distance from ASIS ,Right,Left,,,,,,,,,,
+d0ceb8e5-acdb-11e6-aab0-083e8ecc6d28,Maximal bulk,,Misc,,Distance from ASIS ,Right,Left,,,,,,,,,,
+d0cecc70-acdb-11e6-b4a3-083e8ecc6d28,End of calf muscle bulk,,Misc,,Distance from ASIS ,Right,Left,,,,,,,,,,
+d0cecc71-acdb-11e6-9641-083e8ecc6d28,Ankle,,Misc,,Distance from ASIS ,Right,Left,,,,,,,,,,
+d0cecc72-acdb-11e6-9a44-083e8ecc6d28,Mid foot,,Misc,,Distance from ASIS ,Right,Left,,,,,,,,,,
+d0cedffa-acdb-11e6-82ee-083e8ecc6d28,Metatarsal ,,Misc,,Distance from ASIS ,Right,Left,,,,,,,,,,
+d0cedffb-acdb-11e6-bc0e-083e8ecc6d28,Measurements from anterior superior iliac Spine (ASIS) (in cms),,Misc,,Limb Length from ASIS to ground,Foot Length from medial side,Maximum calf bulk,Mid thigh,Patellar region,Maximal bulk,End of calf muscle bulk,Ankle,Mid foot,Metatarsal,,,
+d0cef380-acdb-11e6-974d-083e8ecc6d28,Limb Circumferential measurements template,,Misc,,Measurements from anterior superior iliac Spine (ASIS) (in cms),Measured by,,,,,,,,,,,

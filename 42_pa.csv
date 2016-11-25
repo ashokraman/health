@@ -1,0 +1,9 @@
+Parent,name,class,datatype,units,High Normal,Low Normal,Allow Decimal,locale,synonym.1,answer.1,answer.2,answer.3,answer.4,answer.5,answer.6,answer.7,answer.8,answer.9,answer.10,answer.11,answer.12,shortname,child.1,child.2,child.3,child.4,child.5,child.6,child.7,reference-term-source,reference-term-code,reference-term-relationship
+Posture Analysis,Shoulder Alignment,Misc,Coded,,,,,,,Normal,Right side lower,Left side lower,,,,,,,,,,,,,,,,,,,,
+Posture Analysis,Level of pinna of Ear,Misc,Coded,,,,,,,Same level,Right pinna lower,Left pinna lower,,,,,,,,,,,,,,,,,,,,
+Posture Analysis,Waist Angle,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Posture Analysis,Alignment of PSIS/ASIS,Misc,Coded,,,,,,,In level,Not in level,,,,,,,,,,,,,,,,,,,,,
+Posture Analysis,Scoliois,Misc,Coded,,,,,,,Concave to left,Convex to right,,,,,,,,,,,,,,,,,,,,,
+Posture Analysis,Primary curve,Misc,Coded,,,,,,,Present,Absent,,,,,,,,,,,,,,,,,,,,,
+Posture Analysis,Secondary curve,Misc,Coded,,,,,,,Present,Absent,Cervical region,Lumbar region,,,,,,,,,,,,,,,,,,,
+Posture Analysis,Pelvic tilt,Misc,Coded,,,,,,,Present,Absent,Anterior,Lateral,,,,,,,,,,,,,,,,,,,

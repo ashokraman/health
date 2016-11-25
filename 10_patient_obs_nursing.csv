@@ -1,0 +1,8 @@
+Parent,name,class,datatype,units,High Normal,Low Normal,Allow Decimal,locale,synonym.1,answer.1,answer.2,answer.3,answer.4,answer.5,answer.6,answer.7,answer.8,answer.9,answer.10,answer.11,answer.12,shortname,child.1,child.2,child.3,child.4,child.5,child.6,child.7,reference-term-source,reference-term-code,reference-term-relationship
+Patient Observations,Comorbidity,Misc,Coded,,,,,,,Bilateral,Unilateral,Upper limb,Genital,,,,,,,,,,,,,,,,,,,
+Patient Observations,Observations,Misc,Coded,,,,,,,Baseline,7th day,Discharge,FU 1,FU 2,FU 3,FU 4,FU 5,FU 6,FU 7,FU 8,,,,,,,,,,,,
+Patient Observations,Nursing Management,Misc,Text,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Patient Observations,Doctor’s Advice,Misc,Text,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Patient Observations,Nurses notes ,Misc,Text,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Patient Observations,Evaluator,Misc,Text,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Patient Observations,Asanas,Misc,Block,,"Limb Status,Assessment type,Asana-1/4,Asana-2/4,Asana-3/4,Asana-4/4,Scores obtained,Percentage,Evaluator",,,,,,,,,,,,,,,,,,,,,,,,,,,

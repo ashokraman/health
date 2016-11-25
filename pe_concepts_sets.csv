@@ -1,0 +1,11 @@
+uuid,name,description,class,shortname,child.1,child.2,child.3,child.4,child.5,child.6,child.7,reference-term-source,reference-term-code,reference-term-relationship
+645a44bc-a833-11e6-b133-083e8ecc6d28,Frequency/Duration,,Concept Details,,Describe,Non-Coded Chief Complaint,Chief Complaint Duration,,,,,,,
+645a911f-a833-11e6-afe0-083e8ecc6d28,Sudden increase in limb size,,Misc,,Frequency/Duration,,,,,,,,,
+645a9120-a833-11e6-bdbc-083e8ecc6d28,"Discharge from the limb, ulcer, exczema",,Misc,,Frequency/Duration,,,,,,,,,
+645a9121-a833-11e6-b633-083e8ecc6d28,Surgery for hydrocele,,Misc,,Frequency/Duration,,,,,,,,,
+645a9122-a833-11e6-9f53-083e8ecc6d28,Using injection/Consuming antibiotics for prevention of fever attacks,,Misc,,Frequency/Duration,,,,,,,,,
+645a9123-a833-11e6-a441-083e8ecc6d28,Presence of odor,,Misc,,Frequency/Duration,,,,,,,,,
+645ab748-a833-11e6-8786-083e8ecc6d28,Presence of fibrous nodules,,Misc,,Frequency/Duration,,,,,,,,,
+645ab749-a833-11e6-a688-083e8ecc6d28,Local lymphadenopathy,,Misc,,Frequency/Duration,,,,,,,,,
+645ab74a-a833-11e6-85f8-083e8ecc6d28,Genital organs affected,,Misc,,Frequency/Duration,,,,,,,,,
+645ab74b-a833-11e6-a520-083e8ecc6d28,Recent inflammatory episode,,Misc,,Frequency/Duration,,,,,,,,,
