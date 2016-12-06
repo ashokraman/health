@@ -70,8 +70,12 @@ def get_concepts_list(dictionary_file_list):
         with open(dictionary_file, encoding="utf8") as in_csvfile:
             reader = csv.DictReader(in_csvfile, quotechar='"')    
     #        reader = csv.DictReader(dictionary_file, ('Concept Id','Name','Description','Synonyms','Answers','Set Members','Class','Datatype','Changed By','Creator'))
-            for row in reader:
-                concepts_dict_list.append(row['Name'] if 'Name' in row else row['name'])
+            try:
+                for row in reader:
+                    concepts_dict_list.append(row['Name'] if 'Name' in row else row['name'])
+            except:
+                import pdb; pdb.set_trace()
+                print("Oops!  Encode issue... file: " + in_csvfile)
 
     return concepts_dict_list
 
@@ -126,9 +130,9 @@ def main(argv):
             block = OrderedDict()
             for row in reader:
                 rcount = rcount+1
-                Parent  = row['Parent']
-                name  = row['name']
-                datatype  = row['datatype']
+                Parent  = row['Parent'].strip()
+                name  = row['name'].strip()
+                datatype  = row['datatype'].strip()
                 if Parent != '':
                     if Parent in block:
                         clist = block[Parent]
@@ -140,7 +144,7 @@ def main(argv):
                 if datatype == 'Coded':
                     wcount, concept_list = coded(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
                 elif datatype == 'Block':
-                        alist = row['synonym.1']
+                        alist = row['synonym.1'].strip()
                         clist = alist.split(',')
                         if len(clist) > 0:
                             block[name] = clist
@@ -152,16 +156,16 @@ def main(argv):
                     if name not in concepts_dict_list+concept_list:                
                         wcount = wcount + 1
                         concept_list.append(name)
-                        child_1 = row['child.1'] if len(row['child.1']) > 0 else ""
-                        child_2 = row['child.2'] if len(row['child.2']) > 0 else ""
-                        child_3 = row['child.3'] if len(row['child.3']) > 0 else ""
-                        child_4 = row['child.4'] if len(row['child.4']) > 0 else ""
-                        child_5 = row['child.5'] if len(row['child.5']) > 0 else ""
-                        child_6 = row['child.6'] if len(row['child.6']) > 0 else ""
-                        child_7 = row['child.7'] if len(row['child.7']) > 0 else ""
-                        child_8 = row['child.8'] if len(row['child.8']) > 0 else ""
-                        child_9 = row['child.9'] if len(row['child.9']) > 0 else ""
-                        child_10 = row['child.10'] if len(row['child.10']) > 0 else ""
+                        child_1 = row['child.1'].strip() if len(row['child.1']) > 0 else ""
+                        child_2 = row['child.2'].strip() if len(row['child.2']) > 0 else ""
+                        child_3 = row['child.3'].strip() if len(row['child.3']) > 0 else ""
+                        child_4 = row['child.4'].strip() if len(row['child.4']) > 0 else ""
+                        child_5 = row['child.5'].strip() if len(row['child.5']) > 0 else ""
+                        child_6 = row['child.6'].strip() if len(row['child.6']) > 0 else ""
+                        child_7 = row['child.7'].strip() if len(row['child.7']) > 0 else ""
+                        child_8 = row['child.8'].strip() if len(row['child.8']) > 0 else ""
+                        child_9 = row['child.9'].strip() if len(row['child.9']) > 0 else ""
+                        child_10 = row['child.10'].strip() if len(row['child.10']) > 0 else ""
                         writer_set.writerow({'uuid':uuid.uuid1(),'name':name,'class':'Concept Details','child.1':child_1,'child.2':child_2,'child.3':child_3,'child.4':child_4,'child.5':child_5,'child.6':child_6,'child.7':child_7,'child.8':child_8,'child.9':child_9,'child.10':child_10})                        
                 
             for item in block.items():
@@ -170,12 +174,12 @@ def main(argv):
                     if item[0] not in concept_list:
                         wcount = wcount + 1
                         concept_list.append(item)
-                        child_1 = item[1][0] if len(item[1]) > 0 else ""
-                        child_2 = item[1][1] if len(item[1]) > 1 else ""
-                        child_3 = item[1][2] if len(item[1]) > 2 else ""
-                        child_4 = item[1][3] if len(item[1]) > 3 else ""
-                        child_5 = item[1][4] if len(item[1]) > 4 else ""
-                        child_6 = item[1][5] if len(item[1]) > 5 else ""
+                        child_1 = item[1][0].strip() if len(item[1]) > 0 else ""
+                        child_2 = item[1][1].strip() if len(item[1]) > 1 else ""
+                        child_3 = item[1][2].strip() if len(item[1]) > 2 else ""
+                        child_4 = item[1][3].strip() if len(item[1]) > 3 else ""
+                        child_5 = item[1][4].strip() if len(item[1]) > 4 else ""
+                        child_6 = item[1][5].strip() if len(item[1]) > 5 else ""
                         child_7 = "" if len(item[1]) <= 6 else item[1][6]
                         child_8 = "" if len(item[1]) <= 7 else item[1][7]
                         child_9 = "" if len(item[1]) <= 8 else item[1][8]
