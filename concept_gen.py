@@ -11,19 +11,7 @@ def date(datestr="", format="%Y%m%d"):
     return datetime.strptime(datestr, format).date()
 
 def coded(row, writer, name, datatype, wcount, concept_list, concepts_dict_list):
-    answers  = [row['answer.1'].strip(),row['answer.2'].strip(),row['answer.3'].strip(),row['answer.4'].strip(),row['answer.5'].strip(),row['answer.6'].strip(),row['answer.7'].strip(),row['answer.8'].strip(),row['answer.9'].strip(),row['answer.10'].strip(),row['answer.12'].strip(),row['answer.12'].strip()] 
-    answer_1  = row['answer.1']
-    answer_2  = row['answer.2']
-    answer_3  = row['answer.3']
-    answer_4  = row['answer.4']
-    answer_5  = row['answer.5']
-    answer_6  = row['answer.6']
-    answer_7  = row['answer.7']
-    answer_8  = row['answer.8']
-    answer_9  = row['answer.9']
-    answer_10  = row['answer.10']
-    answer_11  = row['answer.11']
-    answer_12  = row['answer.12']
+    answers = row['answer'].strip().split(',') 
     cl = row['class'] if 'class' in row else 'Misc'    
     reference_term_source  = row['reference-term-source']
     reference_term_code  = row['reference-term-code']
@@ -39,7 +27,10 @@ def coded(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
         if name not in concept_list:
             wcount = wcount + 1
             concept_list.append(name)
-            writer.writerow({'uuid':uuid.uuid1(),'name':name,'class':cl,'datatype':datatype,'answer.1':answer_1,'answer.2':answer_2,'answer.3':answer_3,'answer.4':answer_4,'answer.5':answer_5,'answer.6':answer_6,'answer.7':answer_7,'answer.8':answer_8,'answer.9':answer_9,'answer.10':answer_10})        
+            arow = OrderedDict([('uuid',uuid.uuid1()),('name',name),('class',cl),('datatype',datatype)])
+            for i in range(1,len(answers)):
+                arow['answer.'+str(i)]=answers[i-1]
+            writer.writerow(arow)        
     return wcount, concept_list
 
 def single(row, writer, name, datatype, wcount, concept_list, concepts_dict_list):
@@ -115,10 +106,14 @@ def main(argv):
     'mydialect',
     lineterminator = '\n')
     with open(ofile1, 'w') as concepts_csvfile:
-        fieldnames = ["uuid","name","description","class","shortname","datatype","units","High Normal","Low Normal","Allow Decimal","locale","synonym.1","answer.1","answer.2","answer.3","answer.4","answer.5","answer.6","answer.7","answer.8","answer.9","answer.10","answer.11","answer.12","reference-term-source","reference-term-code","reference-term-relationship"]
+        fieldnames = ["uuid","name","description","class","shortname","datatype","units","High Normal","Low Normal","Allow Decimal","locale","synonym.1","reference-term-source","reference-term-code","reference-term-relationship"]
+        for i in range(1,65):
+            fieldnames.append("answer."+str(i))
         writer = csv.DictWriter(concepts_csvfile, fieldnames=fieldnames, lineterminator='\n')
         writer.writeheader()
-        fieldnames = ["uuid","name","description","class","shortname","child.1","child.2","child.3","child.4","child.5","child.6","child.7","child.8","child.9","child.10","reference-term-source","reference-term-code","reference-term-relationship"]
+        fieldnames = ["uuid","name","description","class","shortname","reference-term-source","reference-term-code","reference-term-relationship"]
+        for i in range(1,65):
+            fieldnames.append("child."+str(i))
         concepts_set_csvfile = open(ofile2, 'w')
         writer_set = csv.DictWriter(concepts_set_csvfile, fieldnames=fieldnames, lineterminator='\n')
         writer_set.writeheader()
