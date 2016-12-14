@@ -28,7 +28,7 @@ def coded(row, writer, name, datatype, wcount, concept_list, concepts_dict_list)
             wcount = wcount + 1
             concept_list.append(name)
             arow = OrderedDict([('uuid',uuid.uuid1()),('name',name),('class',cl),('datatype',datatype)])
-            for i in range(1,len(answers)):
+            for i in range(1,len(answers)+1):
                 arow['answer.'+str(i)]=answers[i-1]
             writer.writerow(arow)        
     return wcount, concept_list
