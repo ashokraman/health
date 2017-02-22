@@ -85,7 +85,7 @@ def main(argv):
             if fnmatch.fnmatch(fname, "*.csv"):
                 print('\t%s' % fname)
                 inputfile = os.path.join(dirName, fname)
-                with open(inputfile) as in_csvfile:
+                with open(inputfile, encoding="utf8") as in_csvfile:
                     reader = csv.DictReader(in_csvfile, quotechar='"')
                     pParent = ""
                     pChild = ""
