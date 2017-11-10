@@ -9,10 +9,10 @@ import MySQLdb
 import os
 import fnmatch
 
-def read_db(cursor, db, name, level_id):
+def read_db(cursor, db, name, level_id, zip_code):
     # Prepare SQL query to read a record from the database.
-    sql = "select address_hierarchy_entry_id from address_hierarchy_entry where (name='%s' and level_id='%d')" % \
-       (name, level_id)
+    sql = "select address_hierarchy_entry_id from address_hierarchy_entry where (name='%s' and level_id='%d' and user_generated_id='%s')" % \
+       (name, level_id, zip_code)
     try:
        # Execute the SQL command
        res = cursor.execute(sql)
@@ -22,24 +22,24 @@ def read_db(cursor, db, name, level_id):
     except:
        return None
 
-def write_db(cursor, db, name, level_id, parent_id):
-    data = read_db(cursor, db, name, level_id)
+def write_db(cursor, db, name, level_id, parent_id, zip_code):
+    data = read_db(cursor, db, name, level_id, zip_code)
     if data:
        return data
     # Prepare SQL query to INSERT a record into the database.
     uuid_str = str(uuid.uuid1())
     if parent_id:
-       sql = "INSERT INTO address_hierarchy_entry(name, level_id, parent_id, uuid) VALUES ('%s', '%d', '%d', '%s')" % \
-       (name, level_id, parent_id, uuid_str)
+       sql = "INSERT INTO address_hierarchy_entry(name, level_id, parent_id, uuid, user_generated_id) VALUES ('%s', '%d', '%d', '%s', '%s')" % \
+       (name, level_id, parent_id, uuid_str, zip_code)
     else:
-       sql = "INSERT INTO address_hierarchy_entry(name, level_id, uuid) VALUES ('%s', '%d', '%s')" % \
-       (name, level_id, uuid_str)
+       sql = "INSERT INTO address_hierarchy_entry(name, level_id, uuid, user_generated_id) VALUES ('%s', '%d', '%s', '%s')" % \
+       (name, level_id, uuid_str, zip_code)
     try:
         # Execute the SQL command
         res = cursor.execute(sql)
         # Commit your changes in the database
         db.commit()
-        sql = "select address_hierarchy_entry_id from address_hierarchy_entry where (name='%s' and level_id='%d' and uuid='%s')" % (name, level_id, uuid_str)
+        sql = "select address_hierarchy_entry_id from address_hierarchy_entry where (name='%s' and level_id='%d' and uuid='%s' and user_generated_id='%s')" % (name, level_id, uuid_str, zip_code)
         res = cursor.execute(sql)
         data = cursor.fetchone()
         return data[0]
@@ -100,30 +100,29 @@ def main(argv):
                         tvcode  = row['TVCode'].strip().replace("'","")
                         if state == '000':
                             if pParent != parent:
-                               state_id = write_db(cursor, db, parent, 3, None)
+                               state_id = write_db(cursor, db, parent, 3, None, zip)
                                continue
 
                         if zip == '00000':
-                            parent_id = write_db(cursor, db, parent, 4, state_id)
+#                            parent_id = write_db(cursor, db, parent, 4, state_id, zip)
                             continue
                             
                         child  = row['DTName'].strip().replace("'","")
                         subChild  = row['SDTName'].strip().replace("'","")
                         subSubChild  = row['Name'].strip().replace("'","")
-                        if tvcode == '000000':
+                        if ((tvcode == '000000') & (zip == '00000') & (state == '000')):
                             continue
-                        if pZip != zip:
-                            pZip = zip
-                            pParent = parent
-                            if pChild != child:
-                               pChild = child
-                               child_id = write_db(cursor, db, child, 4, parent_id)
-                            if pSubChild != subChild:
-                               psubChild = subChild
-                               sub_child_id = write_db(cursor, db, subChild, 5, child_id)
-                            if pSubSubChild != subSubChild:
-                               pSubSubChild = subSubChild
-                               sub_sub_child_id = write_db(cursor, db, subSubChild, 6, sub_child_id)
+                        pZip = zip
+                        pParent = parent
+                        if pChild != child:
+                           pChild = child
+                           child_id = write_db(cursor, db, child, 4, state_id, zip)
+                        if pSubChild != subChild:
+                           psubChild = subChild
+                           sub_child_id = write_db(cursor, db, subChild, 5, child_id, zip)
+                        if pSubSubChild != subSubChild:
+                           pSubSubChild = subSubChild;
+                           sub_sub_child_id = write_db(cursor, db, subSubChild, 6, sub_child_id, zip)
           
 
 if __name__ == '__main__':
