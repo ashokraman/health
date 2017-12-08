@@ -4,22 +4,22 @@ Parent,name,class,datatype,units,High Normal,Low Normal,Allow Decimal,locale,Blo
 ,Presenting complaint of patient,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,How oedema developed?,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Investigation used for confirmation,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Family history of lymphoedema pedigree chart,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+,Family history of lymphoedema pedigree chart,Misc,Text,,,,,,,FHx list,,,,,,,,,,,,,CIEL,160593,SAME-AS
 ,First Episode of Filiarial Fever,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Last Episode of Filiarial Fever,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Frequence of fever and redness of limb,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Medicines used to control inflammatory episode,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Routine DEC consumption,Misc,Coded,,,,,,,,"Banocide,Hetrazan,Eofil,Other",,,,,,,,,,,,,,
+,Routine DEC consumption,drug,Coded,,,,,,,,"Banocide,Hetrazan,Eofil,Other",,,,,,,,,,,,CIEL,74821,SAME-AS
 ,Who Suggested,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,What frequency,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+,What frequency,question,Text,,,,,,,MEDICATION FREQUENCY,,,,,,,,,,,,,CIEL,160855,SAME-AS
 ,Diuretics used to control oedema?,Misc,Coded,,,,,,,,"Lasix,Dytide,Aldactone,Punarnavasana,Lymphedem,Daflon,Other",,,,,,,,,,,,,,
 ,Who suggested?,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Diuretics details?,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Baseline Past History,Misc,Block,,,,,,"First diagnosis,First diagnosis: Year and place,Presenting complaint of patient,How oedema developed?,Investigation used for confirmation,Family history of lymphoedema pedigree chart,First Episode of Filiarial Fever,Last Episode of Filiarial Fever,Frequence of fever and redness of limb,Medicines used to control inflammatory episode,Routine DEC consumption,Who Suggested,What frequency,Diuretics used to control oedema?,Who suggested?,Diuretics details?",,,,,,,,,,,,,,,,
+,Diuretics details?,question,Text,,,,,,,Diuresis,,,,,,,,,,,,,CIEL,141855,SAME-AS
+,Baseline Past History,Misc,Block,,,,,,"First diagnosis,First diagnosis: Year and place,Presenting complaint of patient,How oedema developed?,Investigation used for confirmation,Family history of lymphoedema pedigree chart,First Episode of Filiarial Fever,Last Episode of Filiarial Fever,Frequence of fever and redness of limb,Medicines used to control inflammatory episode,Routine DEC consumption,Who Suggested,What frequency,Diuretics used to control oedema?,Who suggested?,Diuretics details?",Past medical history,,,,,,,,,,,,,CIEL,1633,SAME-AS
 ,Whether treated for Filariasis,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Alternative systems tried,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Alternative systems tried,Diagnosis,Boolean,,,,,,,Alternative Medicine,,,,,,,,,,,,,CIEL,151316,SAME-AS
 ,If so which one?,Misc,Text,,,,,,,, ,,,,,,,,,,,,,,
-,Practising yoga/physical exercise,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Practising yoga/physical exercise,Misc,Boolean,,,,,,,Exercise,,,,,,,,,,,,,CIEL,159363,SAME-AS
 ,If so give details,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Special washing of the limb practiced everyday,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,If so give details,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
@@ -31,13 +31,13 @@ Parent,name,class,datatype,units,High Normal,Low Normal,Allow Decimal,locale,Blo
 ,Stockings only / compression bandages which one?,Misc,Coded,,,,,,,,"Compression bandage,stocking,Compression bandage & stocking both",,,,,,,,,,,,,,
 ,Frequency of purchasing new compression material,Misc,Coded,,,,,,,,"Weekly,Monthly,Not at all",,,,,,,,,,,,,,
 ,Location of last treatment and particulars,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Drugs and Dosage,Misc,Text,,,,,,,, ,,,,,,,,,,,,,,
+,Drugs and Dosage,question,Text,,,,,,,, ,,,,,,,,,,,,,,
 ,Baseline Treatment History,Misc,Block,,,,,,"Whether treated for Filariasis,Alternative systems tried,If so which one?,Practising yoga/physical exercise,If so give details,Special washing of the limb practiced everyday,If so give details,Practising compression dressing,Practising compression type?,Regularity of using compression bandages,When do you use compression bandages,Use stockings only / compression bandages,Stockings only / compression bandages which one?,Frequency of purchasing new compression material,Location of last treatment and particulars,Drugs and Dosage",,,,,,,,,,,,,,,,
 ,Year of treatment,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Name and address of institution,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Nature of treatment,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Success Rate,Misc,Coded,,,,,,,,"Ineffective,Minimal,Moderate,High",,,,,,,,,,,,,,
-,Drugs and Dosage,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+,Drugs and Dosage,question,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Any other relevant information,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Past treatment details item,Misc,Block,,,,,,"Year of treatment,Name and address of institution,Nature of treatment,Success Rate,Drugs and Dosage,Any other relevant information",,,,,,,,,,,,,,,,
 ,Baseline Treatment Details,Misc,Block,,,,,,Past treatment details item,,,,,,,,,,,,,,,,
@@ -45,46 +45,46 @@ Parent,name,class,datatype,units,High Normal,Low Normal,Allow Decimal,locale,Blo
 ,For other complaints,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,History of previous Surgery,Misc,Block,,,,,,"For Filariasis,For other complaints",,,,,,,,,,,,,,,,
 ,Other complaint(s),Misc,Coded,,,,,,,,"Diabetes,Hypertension,Cardiac Disease,Liver Disease,Renal Problem,Orthopaedic,Others",,,,,,,,,,,,,,
-,Engorged Veins,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Lower Limbs affected,Misc,Coded,,,,,,,,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,,,
-,Upper Limbs affected,Misc,Coded,,,,,,,,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,,,
+,Engorged Veins,Diagnosis,Boolean,,,,,,,history of varicose veins,,,,,,,,,,,,,CIEL,156666,SAME-AS
+,Lower Limbs affected,anatomy,Coded,,,,,,,LOWER EXTREMITIES,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,CIEL,1236,SAME-AS
+,Upper Limbs affected,anatomy,Coded,,,,,,,UPPER EXTREMITIES,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,CIEL,1237,SAME-AS
 ,Size of Limb,Misc,Coded,,,,,,,,"Small,Medium,Huge",,,,,,,,,,,,,,
 ,Any other relevant complaints,Misc,Block,,,,,,"Other complaint(s),Engorged Veins,Lower Limbs affected,Upper Limbs affected,Size of Limb",,caries,,,,,,,,,,,,,,
-,Ulcer,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Folliculitis,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Excoriations,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Eczema:,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Paronychia:,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Ulcerations,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Folliculitis,Misc,Boolean,,,,,,,Superficial Folliculitis,,,,,,,,,,,,,CIEL,125501,SAME-AS
+,Excoriations,Misc,Boolean,,,,,,,Excoriation of Skin,,,,,,,,,,,,,CIEL,140930,SAME-AS
+,Eczema:,Misc,Boolean,,,,,,,ECZEMA,,,,,,,,,,,,,CIEL,120,SAME-AS
+,Paronychia:,Misc,Boolean,,,,,,,Paronychia,,,,,,,,,,,,,CIEL,130794,SAME-AS
 ,Fissures/cracks in feet,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Intertrigo - Interdigital:,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Intertrigo - First:,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Intertrigo - Second:,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Intertrigo - Third:,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Intertrigo - Fourth:,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Intertrigo - Between folds:,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Keratoderma:,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Thickening of skin:,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Intertrigo - Interdigital:,Misc,Boolean,,,,,,,Intertrigo,,,,,,,,,,,,,CIEL,136713,SAME-AS
+,Intertrigo - First:,Misc,Boolean,,,,,,,Intertrigo,,,,,,,,,,,,,CIEL,136713,SAME-AS
+,Intertrigo - Second:,Misc,Boolean,,,,,,,Intertrigo,,,,,,,,,,,,,CIEL,136713,SAME-AS
+,Intertrigo - Third:,Misc,Boolean,,,,,,,Intertrigo,,,,,,,,,,,,,CIEL,136713,SAME-AS
+,Intertrigo - Fourth:,Misc,Boolean,,,,,,,Intertrigo,,,,,,,,,,,,,CIEL,136713,SAME-AS
+,Intertrigo - Between folds:,Misc,Boolean,,,,,,,Intertrigo,,,,,,,,,,,,,CIEL,136713,SAME-AS
+,Keratoderma:,Misc,Boolean,,,,,,,Keratoderma Punctata,,,,,,,,,,,,,CIEL,117447,SAME-AS
+,Thickening of skin:,Misc,Boolean,,,,,,,Thickening of Skin,,,,,,,,,,,,,CIEL,112438,SAME-AS
 ,Warty growth,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Nodules presence,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Scars,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Erythema,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Temperature on area of the redness,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Tenderness on erythema,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Clinical evidence of cellulitis,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Nodules presence,Misc,Boolean,,,,,,,Skin nodule,,,,,,,,,,,,,CIEL,126395,SAME-AS
+,Scars,Misc,Boolean,,,,,,,Painful Scar,,,,,,,,,,,,,CIEL,127146,SAME-AS
+,Erythema,Misc,Boolean,,,,,,,Erythematous Condition,,,,,,,,,,,,,CIEL,118526,SAME-AS
+,Temperature on area of the redness,Misc,Boolean,,,,,,,Body Temperature Above Normal,,,,,,,,,,,,,CIEL,147094,SAME-AS
+,Tenderness on erythema,Misc,Boolean,,,,,,,Erythema Multiforme,,,,,,,,,,,,,CIEL,141053,SAME-AS
+,Clinical evidence of cellulitis,Misc,Boolean,,,,,,,Cellulitis of Leg,,,,,,,,,,,,,CIEL,145998,SAME-AS
 ,Warmth on limb Sites,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Colour of the skin,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Growth of hair,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Right Dermatological Examination,Misc,Block,,,,,,"Ulcer,Folliculitis,Excoriations,Eczema,Paronychia,Fissures/cracks in feet,Intertrigo - Interdigital:,Intertrigo - First:,Intertrigo - Second:,Intertrigo - Third:,Intertrigo - Fourth:,Intertrigo - Between folds:,Keratoderma,Thickening of skin,Warty growth,Nodules presence,Scars,Erythema,Temperature on area of the redness,Tenderness on erythema,Clinical evidence of cellulitis,Warmth on limb Sites,Colour of the skin,Growth of hair",,,,,,,,,,,,,,,,
-,Left Dermatological Examination,Misc,Block,,,,,,"Ulcer,Folliculitis,Excoriations,Eczema,Paronychia,Fissures/cracks in feet,Intertrigo - Interdigital:,Intertrigo - First:,Intertrigo - Second:,Intertrigo - Third:,Intertrigo - Fourth:,Intertrigo - Between folds:,Keratoderma,Thickening of skin,Warty growth,Nodules presence,Scars,Erythema,Temperature on area of the redness,Tenderness on erythema,Clinical evidence of cellulitis,Warmth on limb Sites,Colour of the skin,Growth of hair",,,,,,,,,,,,,,,,
+,Right Dermatological Examination,Misc,Block,,,,,,"Ulcerations,Folliculitis,Excoriations,Eczema:,Paronychia:,Fissures/cracks in feet,Intertrigo - Interdigital:,Intertrigo - First:,Intertrigo - Second:,Intertrigo - Third:,Intertrigo - Fourth:,Intertrigo - Between folds:,Keratoderma:,Thickening of skin:,Warty growth,Nodules presence,Scars,Erythema,Temperature on area of the redness,Tenderness on erythema,Clinical evidence of cellulitis,Warmth on limb Sites,Colour of the skin,Growth of hair",,,,,,,,,,,,,,,,
+,Left Dermatological Examination,Misc,Block,,,,,,"Ulcerations,Folliculitis,Excoriations,Eczema:,Paronychia:,Fissures/cracks in feet,Intertrigo - Interdigital:,Intertrigo - First:,Intertrigo - Second:,Intertrigo - Third:,Intertrigo - Fourth:,Intertrigo - Between folds:,Keratoderma:,Thickening of skin:,Warty growth,Nodules presence,Scars,Erythema,Temperature on area of the redness,Tenderness on erythema,Clinical evidence of cellulitis,Warmth on limb Sites,Colour of the skin,Growth of hair",,,,,,,,,,,,,,,,
 ,General Dermatological Entry Points Table,Misc,Block,,,,,,"Right Dermatological Examination,Left Dermatological Examination",,,,,,,,,,,,,,,,
-,Caries teeth,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Caries teeth,Diagnosis,Boolean,,,,,,,Dental Caries Limited to Enamel,,,,,,,,,,,,,CIEL,118659,SAME-AS
 ,Any Other skin issue,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,General Dermatological Exam,Misc,Block,,,,,,"General Dermatological Entry Points Table,Caries teeth,Any Other skin issue",,,,,,,,,,,,,,,,
-,Fibrous Nodules,Misc,Coded,,,,,,,,"Absent,Few,Multiple,Plenty",,,,,,,,,,,,,,
+,Fibrous Nodules,Diagnosis,Coded,,,,,,,,"Absent,Few,Multiple,Plenty",,,,,,,,,,,,CIEL,126395,SAME-AS
 ,Did patient notice presence of entry points ?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,When he/she got the fever?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Current treatment for other complaints,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Assessment of socio-economic status,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+,Assessment of socio-economic status,question,Text,,,,,,,Socioeconomic status comment,,,,,,,,,,,,,CIEL,160138,SAME-AS
 ,What are the emotional supports needed?,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 Grading,What are major queries of the patient?,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 Grading,Does the patient require any special services?,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
@@ -97,16 +97,16 @@ Whether the patient is ready to:,2. Perform Yoga life long?,Misc,Boolean,,,,,,,,
 Whether the patient is ready to:,3. Perform IMLD life long?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 Whether the patient is ready to:,4. Use compression life long?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 Whether the patient is ready to:,5. Follow diet restrictions for first six months?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-Whether the patient understood the cost of therapy:,1. During the training period,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-Whether the patient understood the cost of therapy:,2. For six months after the initial training,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-Whether the patient understood the cost of therapy:,3. Monthly thereafter?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-Whether the patient understood the cost of therapy:,4. For follow up charges,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-Counselor's Impression:,"Notes after discussion with doctor, patient and patient's family members",Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+Whether the patient understood the cost of therapy:,1. During the training period,ConvSet,Boolean,,,,,,,,,,,,,,,,,,,,,,
+Whether the patient understood the cost of therapy:,2. For six months after the initial training,ConvSet,Boolean,,,,,,,,,,,,,,,,,,,,,,
+Whether the patient understood the cost of therapy:,3. Monthly thereafter?,Frequency,Boolean,,,,,,,,,,,,,,,,,,,,,,
+Whether the patient understood the cost of therapy:,4. For follow up charges,ConvSet,Boolean,,,,,,,,,,,,,,,,,,,,,,
+Counselor's Impression:,"Notes after discussion with doctor, patient and patient's family members",question,Text,,,,,,,,,,,,,,,,,,,,,,
 Any other Information,"Details of information given, sought discussed",Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Name of the counselor,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+,Name of the counselor,question,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Name of the patient,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Counselor's Observations,Misc,Block,,,,,,"Grading,Ask the patient to list the entry points,Whether the patient is ready to:,Whether the patient understood the cost of therapy:,Counselor's Impression:,Any other Information,Name of the counselor,Name of the patient",,,,,,,,,,,,,,,,
-,Annexure 1: Baseline counseling for Lymphodema,Misc,Block,,,,,,"Baseline Past History,Baseline Treatment History,Baseline Treatment Details,History of previous Surgery,Any other relevant complaints,General Dermatological Exam,Fibrous Nodules,Did patient notice presence of entry points ?,When he/she got the fever?,Current treatment for other complaints,Assessment of socio-economic status,What are the emotional supports needed?,Counselor's Observations",,,,,,,,,,,,,,,,
+,Annexure 1: Baseline counseling for Lymphodema,Misc_order,Block,,,,,,"Baseline Past History,Baseline Treatment History,Baseline Treatment Details,History of previous Surgery,Any other relevant complaints,General Dermatological Exam,Fibrous Nodules,Did patient notice presence of entry points ?,When he/she got the fever?,Current treatment for other complaints,Assessment of socio-economic status,What are the emotional supports needed?,Counselor's Observations",,,,,,,,,,,,,,,,
 1.1 DEMOGRAPHIC DETAILS,1. Marital status,Misc,Coded,,,,,,,,"Unmarried,Married,Widow,Seperated due to disease",,,,,,,,,,,,,,
 1.1 DEMOGRAPHIC DETAILS,2. Living with,Misc,Coded,,,,,,,,"Alone,Spouse,Son,Daughter,Relative,Parents,Other",,,,,,,,,,,,,,
 1.1 DEMOGRAPHIC DETAILS,3. Employment status,Misc,Coded,,,,,,,,"Unemployed,Part time,Full time employed,House Making,Not working due to illness,Other",,,,,,,,,,,,,,
@@ -117,7 +117,7 @@ Any other Information,"Details of information given, sought discussed",Misc,Text
 1.2 ENVIRONMENTAL FACTORS,8. Is there any stagnant water in your surroundings?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 1.2 ENVIRONMENTAL FACTORS,9. Is there any back water in your surroundings,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 1.2 ENVIRONMENTAL FACTORS,10. Do you have proper drainage facility in your house & surroundings,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-1.2 ENVIRONMENTAL FACTORS,11. Do you use common toilet which is not maintained properly?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+1.2 ENVIRONMENTAL FACTORS,11. Do you use common toilet which is not maintained properly?,question,Boolean,,,,,,,Toilet/latrine shared with other household(s),,,,,,,,,,,,,CIEL,160258,SAME-AS
 1.2 ENVIRONMENTAL FACTORS,12. Industrialization around your house?,Misc,Boolean,,,,,,,, ,,,,,,,,,,,,,,
 1.2 ENVIRONMENTAL FACTORS,13. Garbage dumped around your house/area?(improper waste disposal),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 1.2 ENVIRONMENTAL FACTORS,14. Is your house surrounded by agriculture lans?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
@@ -136,12 +136,12 @@ Any other Information,"Details of information given, sought discussed",Misc,Text
 ,20. According to you what is the cause of swelling?,Misc,Coded,,,,,,,,"A) From birth,B) After surgery / accident,C) Mosquito bite,D) After attaining puberty,E) Others",,,,,,,,,,,,,,
 ,21. Any treatments taken earlier?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,22. Any history of disease in the family?,Misc,Boolean,,,,,,,, ,,,,,,,,,,,,,,
-,23. Has your employment status changed because of the disease?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,23. Has your employment status changed because of the disease?,diagnosis,Boolean,,,,,,,Change of job,,,,,,,,,,,,,CIEL,155493,SAME-AS
 ,24. Has your family income changed because of the disease?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,25. Do you feel poor hygiene will increase the disease?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,26. How do you view your disease?,Misc,Coded,,,,,,,,"A) Very problematic,b) Moderately problematic,C) Slightly problematic,D) Not problematic",,,,,,,,,,,,,,
 ,27. What is your family's attitude towards your disease?,Misc,Coded,,,,,,,,"A) Caring,B) Accepting,C) Dismissive,D) Ignoring",,,,,,,,,,,,,,
-,28. How often have you visited the clinic per year due to the swelling and infection?,Misc,Coded,,,,,,,,"A) Never,B) 1-5 times,C) 5-10 times,D) More then 10 times",,,,,,,,,,,,,,
+,28. How often have you visited the clinic per year due to the swelling and infection?,Misc,Coded,,,,,,,NUMBER OF VISITS TO A HEALTH POST/CLINIC FOR ILLNESS/CONDITION,"A) Never,B) 1-5 times,C) 5-10 times,D) More then 10 times",,,,,,,,,,,,CIEL,1762,SAME-AS
 Primary Consultation,For lymphoedema,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 Primary Consultation,For other disease,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 Whether they take OTC?,For lymphoedema,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
@@ -179,23 +179,23 @@ Usual activities,Difficulty in continuing the job,Misc,Coded,,,,,,,,"No problem,
 Usual activities,Difficulty in continuing the education,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Disease Burden,"History of painful redness, swelling and cellulitie of leg(filarial fever)",Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Disease Burden,Foul smell (Odour),Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
-Disease Burden,Itching (Eczema/Discharge from limb),Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
-Disease Burden,Wound (Non-healing ulcer),Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
+Disease Burden,Itching (Eczema/Discharge from limb),Finding,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
+Disease Burden,Wound (Non-healing ulcer),Misc,Coded,,,,,,,Wound,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,CIEL,159328,SAME-AS
 Disease Burden,Weight / size of limb,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Pain/Discomfort,Pain increases at night,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Pain/Discomfort,Pain increases during the day,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Pain/Discomfort,Pain increases while walking,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Pain/Discomfort,Pain increases while sitting,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
-Pain/Discomfort,Pain in the joints,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
+Pain/Discomfort,Pain in the joints,Diagnosis,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Pain/Discomfort,Pain in the unaffected part of body,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Pain/Discomfort,Painful ulcers,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Psychological Health,Experience sense of failure?,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Psychological Health,Fear something bad might happen to you?,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Psychological Health,Discouraged / tensed about the future?,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Psychological Health,Feeling neglected by friends and family members?,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
-Psychological Health,Feeling lonely?,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
+Psychological Health,Feeling lonely?,Diagnosis,Coded,,,,,,,Feeling Lonely,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,CIEL,140470,SAME-AS
 Psychological Health,Feeling tensed about your disease?,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
-Psychological Health,Find it difficult in concentration & memory?,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
+Psychological Health,Find it difficult in concentration & memory?,Diagnosis,Coded,,,,,,,Lack of Concentration,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,CIEL,159891,SAME-AS
 Social participation,Has your lifestyle changed after getting  the disease?,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Social participation,Do you have problem in moving around freely without feeling self-conscious?,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
 Social participation,Do you have problem in approaching people in the community?,Misc,Coded,,,,,,,,"No problem,Very Mild,Moderate,Severe,Most Severe,NA",,,,,,,,,,,,,,
@@ -206,54 +206,54 @@ Social participation,How much problem you have faced because of ill health?,Misc
 ,Part 2. Lymphatic Filariasis Specific Quality of Life Questionnaire (LFSQQ),Misc,Block,,,,,,How do you rate your overall health in the past 30 days?,,,,,,,,,,,,,,,,
 ,Complaint Episode,Misc,Coded,,,,,,,,"Recent inflammatory episode - Right,Recent inflammatory episode - Left,Using injection/Consuming antibiotics for prevention of fever attacks,Genital organs affected,Surgery for hydrocele,Sudden increase in limb size - Right,Sudden increase in limb size - Left,Discharge from the limb/ulcer/eczema - Right,Discharge from the limb/ulcer/eczema - Left,Local lymphadenopathy - Right,Local lymphadenopathy - Left,Presence of odor - Right,Presence of odor - Left,Presence of fibrous nodules - Right,Presence of fibrous nodules - Left",,,,,,,,,,,,,,
 ,Non-Coded Complaint,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Frequency/Duration,Duration,Numeric,,,,,,,,,,,,,,,,,,,,,,
+,Frequency/Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Complaint Information,Concept Details,,,,,,,,,,,Complaint Episode,Non-Coded Complaint,Frequency/Duration,,,,,,,,,,
 ,How the odema was developed,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Clinical assessment of aetiology,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Family History (pedigree chart),Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 Medical History,Mode of treatment,Misc,Coded,,,,,,,,"Modern medicine,Homoeopathy,Folklore medicine,Ayurveda,Unani,Any other(specify)",,,,,,,,,,,,,,
 Medical History,Medication name,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-Medical History,Duration,Concept Details,,,,,,,,,,,Mode of treatment,Non-Coded Chief Complaint,Chief Complaint Duration,,,,,,,,,,
+Medical History,Duration,question,,,,,,,,Medication duration,,,Mode of treatment,Non-Coded Chief Complaint,Chief Complaint Duration,,,,,,,,CIEL,159368,SAME-AS
 Medical History,Treatment outcome,Misc,Coded,,,,,,,,"Improved,Aggravated,No change,Cured,Caused cellulitis",,,,,,,,,,,,,,
 ,3.1 History of present illness,Misc,Block,,,,,,"Complaint Information,How the odema was developed,Clinical assessment of aetiology,Family History (pedigree chart),Medical History",,,,,,,,,,,,,,,,
-General Examination,Head Exam,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-General Examination,Eye Exam,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-General Examination,Neck Exam,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-General Examination,Thorax Exam,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-General Examination,Abdomen Exam,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-General Examination,Extremeties Exam,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-Systemic Examination,CNS,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-Systemic Examination,CVS,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-Systemic Examination,RIS,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-Systemic Examination,GIUS,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+General Examination,Head Exam,Question,Text,,,,,,,"REVIEW OF SYSTEMS, HEENT",,,,,,,,,,,,,CIEL,1070,SAME-AS
+General Examination,Eye Exam,ConvSet,Text,,,,,,,Eye diagnoses,,,,,,,,,,,,,CIEL,160172,SAME-AS
+General Examination,Neck Exam,Test,Text,,,,,,,,,,,,,,,,,,,,,,
+General Examination,Thorax Exam,Finding,Text,,,,,,,Chest examination (text),,,,,,,,,,,,,CIEL,160689,SAME-AS
+General Examination,Abdomen Exam,ConvSet,Text,,,,,,,Abdomen examination detail,,,,,,,,,,,,,CIEL,160949,SAME-AS
+General Examination,Extremeties Exam,Finding,Text,,,,,,,EXTREMITY EXAM FINDINGS,,,,,,,,,,,,,CIEL,1127,SAME-AS
+Systemic Examination,CNS,Question,Text,,,,,,,"REVIEW OF SYSTEMS, CENTRAL NERVOUS SYSTEM",,,,,,,,,,,,,CIEL,159615,SAME-AS
+Systemic Examination,CVS,Question,Text,,,,,,,"REVIEW OF SYSTEMS, CARDIOPULMONARY",,,,,,,,,,,,,CIEL,159615,SAME-AS
+Systemic Examination,RIS,Question,Text,,,,,,,"REVIEW OF SYSTEMS, CARDIOPULMONARY",,,159615,SAME-AS,AMPATH,1071,SAME-AS,SNOMED MVP,1.07E+13,SAME-AS,CIEL,CIEL,CIEL,159615,SAME-AS
+Systemic Examination,GIUS,Question,Text,,,,,,,"REVIEW OF SYSTEMS, GENITOURINARY",,,,,,,,,,,,,CIEL,1080,SAME-AS
 Systemic Examination,Integumentary/Lymphatic system,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,3.2 Physical Examination at baseline,Misc,Block,,,,,,"General Examination,Systemic Examination",,,,,,,,,,,,,,,,
 3.3 Photo documentation,View,Misc,Coded,,,,,,,,"Anterior view,Right lateral view,Posterior view,Left lateral view,Video recording of special procedure,Video recording of gait",,,,,,,,,,,,,,
 3.3 Photo documentation,Image,Image,Complex,,,,,,,,,,,,,,,,,,,,,,
 3.3 Photo documentation,Others/Discussed,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Total Number,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,N:________ %,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,L:________ %,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,E:________ %,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,B:________ %,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,M:________ %,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,Differential Counts,Misc,Block,,,,,,"N:________ %,L:________ %,E:________ %,B:________ %,M:________ %",,,,,,,,,,,,,,,,
-,ESR at 1st hour,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,Hb%(gm%),Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,Plasma glucose level (PGL),Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,Serum creatinine:,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,ALT,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,SGPT,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,SGOT,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,Serum Bilirubin,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,Liver function tests,Misc,Block,,,,,,"ALT,SGPT,SGOT,Serum Bilirubin",,,,,,,,,,,,,,,,
+,Total Number,Test,Numeric,,,,,,,,,,,,,,,,,,,,,,
+,N:________ %,test,Numeric,,,,,,,NEUTROPHILS (%) - MICROSCOPIC EXAM,,,,,,,,,,,,,CIEL,1336,SAME-AS
+,L:________ %,test,Numeric,,,,,,,LYMPHOCYTES (%) - MICROSCOPIC EXAM,,,,,,,,,,,,,CIEL,1338,SAME-AS
+,E:________ %,test,Numeric,,,,,,,EOSINOPHILS (%) - MICROSCOPIC EXAM,,,,,,,,,,,,,CIEL,1340,SAME-AS
+,B:________ %,test,Numeric,,,,,,,BASOPHILS (%) - MICROSCOPIC EXAM,,,,,,,,,,,,,CIEL,1341,SAME-AS
+,M:________ %,test,Numeric,,,,,,,MONOCYTES (%) - MICROSCOPIC EXAM,,,,,,,,,,,,,CIEL,1339,SAME-AS
+,Differential Counts,LabSet,Block,,,,,,"N:________ %,L:________ %,E:________ %,B:________ %,M:________ %",,,,,,,,,,,,,,CIEL,1026,SAME-AS
+,ESR at 1st hour,LabTest,Numeric,,,,,,,,,,,,,,,,,,,,,,
+,Hb%(gm%),LabTest,Numeric,,,,,,,,,,,,,,,,,,,,,,
+,Plasma glucose level (PGL),Finding,Numeric,,,,,,,,,,,,,,,,,,,,,,
+,Serum creatinine:,Test,Numeric,,,,,,,SERUM CREATININE,,,,,,,,,,,,,CIEL,790,SAME-AS
+,ALT,Test,Numeric,,,,,,,ALANINE AMINOTRANSFERASE,,,,,,,,,,,,,CIEL,1271,SAME-AS
+,SGPT,Test,Numeric,,,,,,,,,,,,,,,,,,,,,,
+,SGOT,Test,Numeric,,,,,,,ASPARTATE AMINOTRANSFERASE,,,,,,,,,,,,,CIEL,1271,SAME-AS
+,Serum Bilirubin,test,Numeric,,,,,,,Total Bilirubin,,,,,,,,,,,,,CIEL,655,SAME-AS
+,Liver function tests,LabSet,Block,,,,,,"ALT,SGPT,SGOT,Serum Bilirubin",,,,,,,,,,,,,,,,
 ,Filariasis card test(ICT),Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Urine Analysis,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+,Urine Analysis,LabSet,Text,,,,,,,,,,,,,,,,,,,,,,
 ,ECG,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Pus for C/S,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+,Pus for C/S,LabSet,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Doppler study,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Ultrasonography of skin,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Other specific investigation,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+,Other specific investigation,ConvSet,Text,,,,,,,,,,,,,,,,,,,,,,
 ,3.4 Baseline Investigations,Misc,Block,,,,,,"Total Number,Differential Counts,ESR at 1st hour,Hb%(gm%),Plasma glucose level (PGL),Serum creatinine:,Liver function tests,Filariasis card test(ICT),Urine Analysis,ECG,Pus for C/S,Doppler study,Ultrasonography of skin,Other specific investigation",,,,,,,,,,,,,,,,
 ,Limb Length from ASIS to ground,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Foot Length from medial side,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
@@ -266,17 +266,17 @@ Systemic Examination,Integumentary/Lymphatic system,Misc,Text,,,,,,,,,,,,,,,,,,,
 ,Mid foot,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Metatarsal ,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Distance from ASIS ,Misc,Block,,,,,,"Limb Length from ASIS to ground,Foot Length from medial side,Maximum calf bulk(in standing),Mid thigh,Patellar region,Maximal bulk,End of calf muscle bulk,Ankle,Mid foot,Metatarsal",,,,,,,,,,,,,,,,
-,Right Limb,Misc,Block,,,,,,"Limb Length from ASIS to ground,Foot Length from medial side,Maximum calf bulk(in standing),Mid thigh,Patellar region,Maximal bulk,End of calf muscle bulk,Ankle,Mid foot,Metatarsal",,,,,,,,,,,,,,,,
-,Left Limb,Misc,Block,,,,,,"Limb Length from ASIS to ground,Foot Length from medial side,Maximum calf bulk(in standing),Mid thigh,Patellar region,Maximal bulk,End of calf muscle bulk,Ankle,Mid foot,Metatarsal",,,,,,,,,,,,,,,,
+,Right Limb,Anatomy,Block,,,,,,"Limb Length from ASIS to ground,Foot Length from medial side,Maximum calf bulk(in standing),Mid thigh,Patellar region,Maximal bulk,End of calf muscle bulk,Ankle,Mid foot,Metatarsal",,,,,,,,,,,,,,,,
+,Left Limb,Anatomy,Block,,,,,,"Limb Length from ASIS to ground,Foot Length from medial side,Maximum calf bulk(in standing),Mid thigh,Patellar region,Maximal bulk,End of calf muscle bulk,Ankle,Mid foot,Metatarsal",,,,,,,,,,,,,,,,
 ,Measuring points(cms) from ASIS ,Misc,Block,,,,,,"Distance from ASIS,Right Limb,Left Limb",,,,,,,,,,,,,,,,
-Limb volume (Displaced water method),Right Leg,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-Limb volume (Displaced water method),Left Leg,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
+Limb volume (Displaced water method),Right Leg,Anatomy,Block,,,,,,,,,,,,,,,,,,,,,,
+Limb volume (Displaced water method),Left Leg,Anatomy,Block,,,,,,,,,,,,,,,,,,,,,,
 ,Waist circumference,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Abdominal girth,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,Height?,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
+,Height?,Test,Numeric,,,,,,,HEIGHT (CM),HEIGHT (CM),,,,,,,,,,,,CIEL,5090,SAME-AS
 ,Body Weight(Kg),Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Body weight time of measurement,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Body Mass index,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
+,Body Mass index,Computed,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Measured by,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Reason if volume measurement not done,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Volume and body weight,Misc,Block,,,,,,"Limb volume (Displaced water method),Waist circumference,Abdominal girth,Height?,Body Weight(Kg),Body weight time of measurement,Body Mass index,Measured by,Reason if volume measurement not done",,,,,,,,,,,,,,,,
@@ -297,28 +297,28 @@ Any changes in grading at the different locations of limb,Right?,Misc,Boolean,,,
 Any changes in grading at the different locations of limb,Left?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Skin Folded Thickness,Misc,Block,,,,,,"Second great toe thickness,Mid foot thickness,Any changes in grading at the different locations of limb",,,,,,,,,,,,,,,,
 ,3.6 Assessment of Lymphoedema,Misc,Block,,,,,,"Grading*,Skin Folded Thickness",,,,,,,,,,,,,,,,
-ADLA,Fever with chills and rigor?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-ADLA,Nausea and vomiting?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-ADLA,Lymphadenitis?,Misc,Coded,,,,,,,,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,,,
+ADLA,Fever with chills and rigor?,Diagnosis,Boolean,,,,,,,,,,,,,,,,,,,,,,
+ADLA,Nausea and vomiting?,Diagnosis,Boolean,,,,,,," Nausea, vomiting and diarrhea","nausea, vomiting and diarrhea",,,,,,,,,,,,CIEL,157892,SAME-AS
+ADLA,Lymphadenitis?,Diagnosis,Coded,,,,,,,Acute Lymphadenitis,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,CIEL,121999,SAME-AS
 ADLA,Warmth?,Misc,Coded,,,,,,,,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,,,
-ADLA,Erythema?,Misc,Coded,,,,,,,,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,,,
-ADLA,Tenderness?,Misc,Coded,,,,,,,,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,,,
+ADLA,Erythema?,Diagnosis,Coded,,,,,,,Erythematous Condition,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,CIEL,118526,SAME-AS
+ADLA,Tenderness?,Diagnosis,Coded,,,,,,,Skin Tenderness,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,CIEL,126384,SAME-AS
 ADLA,Affected limb?,Misc,Coded,,,,,,,,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,,,
 ,3.7 Dermatological Examination,Misc,Block,,,,,,"General Dermatological Exam,ADLA",,,,,,,,,,,,,,,,
 Associated complaints and prescribed medication,Associated complaints,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-Associated complaints and prescribed medication,Medication,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-Associated complaints and prescribed medication,Prescribing doctor / health center,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+Associated complaints and prescribed medication,Medication,Misc,Text,,,,,,,MEDICATION ORDERS,,,,,,,,,,,,,CIEL,1282,SAME-AS
+Associated complaints and prescribed medication,Prescribing doctor / health center,Misc,Text,,,,,,,HEALTH CENTER HOSPITAL,,,,,,,,,,,,,CIEL,1275,SAME-AS
 ,3.8 Associated diseases and current medication,Misc,Block,,,,,,Associated complaints and prescribed medication,,,,,,,,,,,,,,,,
 ,Ruksha(Xerosis),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Bahushopha pada(Dependant oedema of foot),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Sphutana(Fissures),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Krishna(Black pigmentation),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Sphutana(Fissures),Diagnosis,Boolean,,,,,,,Fissure in Skin,Fissure in Skin,,,,,,,,,,,,CIEL,140104,SAME-AS
+,Krishna(Black pigmentation),Diagnosis,Boolean,,,,,,,Hyperpigmentation of Skin,,,,,,,,,,,,,CIEL,138235,SAME-AS
 ,Theevra Thoda or Arti or Animitta rujam(Pricking pain),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Bahusho jwara(History of fever),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Vataja type - Right,Misc,Block,,,,,,"Ruksha(Xerosis),Bahushopha pada(Dependant oedema of foot),Sphutana(Fissures),Krishna(Black pigmentation),Theevra Thoda or Arti or Animitta rujam(Pricking pain),Bahusho jwara(History of fever)",,,,,,,,,,,,,,,,
 ,Vataja type - Left,Misc,Block,,,,,,"Ruksha(Xerosis),Bahushopha pada(Dependant oedema of foot),Sphutana(Fissures),Krishna(Black pigmentation),Theevra Thoda or Arti or Animitta rujam(Pricking pain),Bahusho jwara(History of fever)",,,,,,,,,,,,,,,,
 ,Vataja Table,Misc,Block,,,,,,"Vataja type - Right,Vataja type - Left",,,,,,,,,,,,,,,,
-,Daha(Burning Sensation),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Daha(Burning Sensation),Symptom,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Raktavarna(Redness),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Peetha varna(Yellow discolouration),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Samsrava(Discharge),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
@@ -329,13 +329,13 @@ Associated complaints and prescribed medication,Prescribing doctor / health cent
 ,Pittaja type - Right,Misc,Block,,,,,,"Daha(Burning Sensation),Raktavarna(Redness),Peetha varna(Yellow discolouration),Samsrava(Discharge),Mrudu(Soft),Gurutwa(Heaviness),Adhika shopha(Largely oedematus),Jwara yukta(Warmth of limb or fever)",,,,,,,,,,,,,,,,
 ,Pittaja type - Left,Misc,Block,,,,,,"Daha(Burning Sensation),Raktavarna(Redness),Peetha varna(Yellow discolouration),Samsrava(Discharge),Mrudu(Soft),Gurutwa(Heaviness),Adhika shopha(Largely oedematus),Jwara yukta(Warmth of limb or fever)",,,,,,,,,,,,,,,,
 ,Pittaja Table,Misc,Block,,,,,,"Pittaja type - Right,Pittaja type - Left",,,,,,,,,,,,,,,,
-,Snigdha Snigdha varna(Oily/Shiny),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Shwethabha(Whitish),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Snigdha Snigdha varna(Oily/Shiny),Diagnosis,Boolean,,,,,,,oily skin,,,,,,,,,,,,,CIEL,153515,SAME-AS
+,Shwethabha(Whitish),Misc,Boolean,,,,,,,PALENESS,,,,,,,,,,,,,CIEL,5245,SAME-AS
 ,Drudham/Sthiram(Organised),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Bahukanatakai parivrtam(With Nodules/warty growth),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Bahukanatakai parivrtam(With Nodules/warty growth),Diagnosis,Boolean,,,,,,,Skin nodule,,,,,,,,,,,,,CIEL,126395,SAME-AS
 ,Sthoola(Huge in size),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Guru Gurutwamanisham(Feeling Of Heaviness),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-,Sheethanvitha(Cold to Touch),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+,Sheethanvitha(Cold to Touch),Symptom,Boolean,,,,,,,SKIN COLD TO TOUCH,,,,,,,,,,,,,CIEL,1887,SAME-AS
 ,Adhika shopha(Largely edematous),Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Kaphaja type - Right,Misc,Block,,,,,,"Snigdha Snigdha varna(Oily/Shiny),Shwethabha(Whitish),Drudham/Sthiram(Organised),Bahukanatakai parivrtam(With Nodules/warty growth),Sthoola(Huge in size),Guru Gurutwamanisham(Feeling Of Heaviness),Sheethanvitha(Cold to Touch),Adhika shopha(Largely edematous)",,,,,,,,,,,,,,,,
 ,Kaphaja type - Left,Misc,Block,,,,,,"Snigdha Snigdha varna(Oily/Shiny),Shwethabha(Whitish),Drudham/Sthiram(Organised),Bahukanatakai parivrtam(With Nodules/warty growth),Sthoola(Huge in size),Guru Gurutwamanisham(Feeling Of Heaviness),Sheethanvitha(Cold to Touch),Adhika shopha(Largely edematous)",,,,,,,,,,,,,,,,
@@ -390,7 +390,7 @@ Selection of phanta for skin care,Quantity,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Level of pinna of Ear,Misc,Coded,,,,,,,,"Same level,Right pinna lower,Left pinna lower",,,,,,,,,,,,,,
 ,Waist Angle,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Alignment of PSIS/ASIS,Misc,Coded,,,,,,,,"In level,Not in level",,,,,,,,,,,,,,
-,Scoliois,Misc,Coded,,,,,,,,"Concave to left,Convex to right",,,,,,,,,,,,,,
+,Scoliois,diagnosis,Coded,,,,,,,,"Concave to left,Convex to right",,,,,,,,,,,,,,
 ,Primary curve,Misc,Coded,,,,,,,,"Present,Absent",,,,,,,,,,,,,,
 ,Secondary curve,Misc,Coded,,,,,,,,"Present,Absent,Cervical region,Lumbar region",,,,,,,,,,,,,,
 ,Pelvic tilt,Misc,Coded,,,,,,,,"Present,Absent,Anterior?,Lateral?",,,,,,,,,,,,,,
@@ -399,15 +399,15 @@ Selection of phanta for skin care,Quantity,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Posture Analysis Table,Misc,Block,,,,,,"Right-Side Posture,Left-Side Posture",,,,,,,,,,,,,,,,
 ,4.2 Posture Analysis,Misc,Block,,,,,,Posture Analysis Table,,,,,,,,,,,,,,,,
 ,Gait Change Examination,Misc,Coded,,,,,,,,"Baseline,Followup",,,,,,,,,,,,,,
-,Bunion - Affected limb,Misc,Coded,,,,,,,,"Right-Foot,Left-Foot",,,,,,,,,,,,,,
-,Tailor's Bunion - Affected Limb,Misc,Coded,,,,,,,,"Right-Foot,Left-Foot",,,,,,,,,,,,,,
-,Hammertoe deformity - Affected Limb,Misc,Coded,,,,,,,,"Right-Foot,Left-Foot",,,,,,,,,,,,,,
-,Flat Foot - Affected Limb,Misc,Coded,,,,,,,,"Right-Foot,Left-Foot",,,,,,,,,,,,,,
+,Bunion - Affected limb,diagnosis,Coded,,,,,,,,"Right-Foot,Left-Foot",,,,,,,,,,,,,,
+,Tailor's Bunion - Affected Limb,diagnosis,Coded,,,,,,,,"Right-Foot,Left-Foot",,,,,,,,,,,,,,
+,Hammertoe deformity - Affected Limb,diagnosis,Coded,,,,,,,Hammer Toe,"Right-Foot,Left-Foot",,,,,,,,,,,,CIEL,117708,SAME-AS
+,Flat Foot - Affected Limb,Misc,Coded,,,,,,,Acquired Flexible Flat Foot,"Right-Foot,Left-Foot",,,,,,,,,,,,CIEL,150048,SAME-AS
 ,Hyperextension of toe (Hitchhiker's Toe) - Affected Limb,Misc,Coded,,,,,,,,"Right-Foot,Left-Foot",,,,,,,,,,,,,,
-,Pronated foot - Affected Limb,Misc,Coded,,,,,,,,"Right-Foot,Left-Foot",,,,,,,,,,,,,,
-,Genu valgum - Affected Limb,Misc,Coded,,,,,,,,"Right-Knee,Left-Knee",,,,,,,,,,,,,,
-,Flexion contracture of knee - Affected Limb,Misc,Coded,,,,,,,,"Right-Knee,Left-Knee",,,,,,,,,,,,,,
-,Excessive knee extension - Affected Limb,Misc,Coded,,,,,,,,"Right-Knee,Left-Knee",,,,,,,,,,,,,,
+,Pronated foot - Affected Limb,Misc,Coded,,,,,,,Pronation of Foot,"Right-Foot,Left-Foot",,,,,,,,,,,,CIEL,128374,SAME-AS
+,Genu valgum - Affected Limb,Misc,Coded,,,,,,,Acquired Genu Valgum and Varum,"Right-Knee,Left-Knee",,,,,,,,,,,,CIEL,150044,SAME-AS
+,Flexion contracture of knee - Affected Limb,Misc,Coded,,,,,,,Knee Contracture,"Right-Knee,Left-Knee",,,,,,,,,,,,CIEL,110333,SAME-AS
+,Excessive knee extension - Affected Limb,Misc,Coded,,,,,,,Acquired Genu Recurvatum,"Right-Knee,Left-Knee",,,,,,,,,,,,CIEL,150046,SAME-AS
 ,Baker's cyst - Affected Limb,Misc,Coded,,,,,,,,"Right-Knee,Left-Knee",,,,,,,,,,,,,,
 ,Outer rotation of hip - Affected Limb,Misc,Coded,,,,,,,,"Right-Hip,Left-Hip",,,,,,,,,,,,,,
 ,Anterior pelvic tilt - Affected Limb,Misc,Coded,,,,,,,,"Right-Hip,Left-Hip",,,,,,,,,,,,,,
@@ -415,11 +415,11 @@ Selection of phanta for skin care,Quantity,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Affected Limb,Misc,Block,,,,,,"Tailor's Bunion - Affected Limb,Hammertoe deformity - Affected Limb,Flat Foot - Affected Limb,Hyperextension of toe (Hitchhiker's Toe) - Affected Limb,Pronated foot - Affected Limb,Genu valgum - Affected Limb,Flexion contracture of knee - Affected Limb,Excessive knee extension - Affected Limb,Baker's cyst - Affected Limb,Outer rotation of hip - Affected Limb,Anterior pelvic tilt - Affected Limb,Lateral pelvic tilt - Affected Limb",,,,,,,,,,,,,,,,
 ,Bunion - Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Tailor's Bunion - Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,Hammertoe deformity - Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
+,Hammertoe deformity - Duration,Misc,Coded,,,,,,,,,,,,,,,,,,,,,,
 ,Flat Foot - Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Hyperextension of toe (Hitchhiker's Toe) - Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Pronated foot - Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,Genu valgum - Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
+,Genu valgum - Duration,diagnosis,Coded,,,,,,,Acquired Genu Valgum and Varum,"Right-Knee,Left-Knee",,,,,,,,,,,,CIEL,150044,SAME-AS
 ,Flexion contracture of knee - Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Excessive knee extension - Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Baker's cyst - Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
@@ -428,16 +428,16 @@ Selection of phanta for skin care,Quantity,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Lateral pelvic tilt - Duration,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 ,Duration (months),Misc,Block,,,,,,"Tailor's Bunion - Duration,Hammertoe deformity - Duration,Flat Foot - Duration,Hyperextension of toe (Hitchhiker's Toe) - Duration,Pronated foot - Duration,Genu valgum - Duration,Flexion contracture of knee - Duration,Excessive knee extension - Duration,Baker's cyst - Duration,Outer rotation of hip - Duration,Anterior pelvic tilt - Duration,Lateral pelvic tilt - Duration",,,,,,,,,,,,,,,,
 ,Improper Gait Examination Table,Misc,Block,,,,,,"Affected Limb,Duration (months)",,,,,,,,,,,,,,,,
-,Corn/callus formation,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+,Corn/callus formation,diagnosis,Text,,,,,,,Corns and Callus,,,,,,,,,,,,,CIEL,143336,SAME-AS
 ,Change in Sole,Misc,Block,,,,,,Corn/callus formation,,,,,,,,,,,,,,,,
 ,Recommended exercises,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,4.3 Structural changes due to improper gait,Misc,Block,,,,,,"Gait Change Examination,Improper Gait Examination Table,Change in Sole",,,,,,,,,,,,,,,,
 ,Part 4. Locomotor changes,Misc,Block,,,,,,"4.1 Range of motion(ROM) of joints active,4.2 Posture Analysis,4.3 Structural changes due to improper gait",,,,,,,,,,,,,,,,
 5.1 Activities of Multipurpose Health Worker,Removing/Training/monitoring the care of bandages,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 5.1 Activities of Multipurpose Health Worker,Hair parrying /nail Parrying,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-5.1 Activities of Multipurpose Health Worker,Soap for skin wash,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-5.1 Activities of Multipurpose Health Worker,Skin wash with soap and water. Which soap?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-5.1 Activities of Multipurpose Health Worker,Ringer lactate spray,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+5.1 Activities of Multipurpose Health Worker,Soap for skin wash,Misc,Text,,,,,,,Soap,,,,,,,,,,,,,CIEL,160263,SAME-AS
+5.1 Activities of Multipurpose Health Worker,Skin wash with soap and water. Which soap?,Misc,Boolean,,,,,,,Soap,,,,,,,,,,,,,CIEL,160263,SAME-AS
+5.1 Activities of Multipurpose Health Worker,Ringer lactate spray,Drug,Boolean,,,,,,,,,,,,,,,,,,,,,,
 5.1 Activities of Multipurpose Health Worker,Soaking in warm phanta,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 5.1 Activities of Multipurpose Health Worker,Drying of inter Digital clefts with Cotton cloth/dryer,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 5.1 Activities of Multipurpose Health Worker,Drying of Folds with Cotton Pad,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
@@ -484,23 +484,23 @@ Additional Exercises,Balancing Over heels and heel raising,Misc,Numeric,,,,,,,,,
 Additional Exercises,Standing Hip flexion,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 Additional Exercises,Side Walking,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 Additional Exercises,Pelvic exercises,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Chest Pain?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Feeling Tensed?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Blurred Vision?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Dizziness?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Fast or deep Breathing?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
+Check for Hyperventilation symptoms during and after yoga,Chest Pain?,Misc,Coded,,,,,,,Cardiac chest pain,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,159361,SAME-AS
+Check for Hyperventilation symptoms during and after yoga,Feeling Tensed?,Misc,Coded,,,,,,,Feeling Tense,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,140468,SAME-AS
+Check for Hyperventilation symptoms during and after yoga,Blurred Vision?,Misc,Coded,,,,,,,Blurred Vision,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,1887,SAME-AS
+Check for Hyperventilation symptoms during and after yoga,Dizziness?,Misc,Coded,,,,,,,Dizziness and Giddiness,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,141830,SAME-AS
+Check for Hyperventilation symptoms during and after yoga,Fast or deep Breathing?,Misc,Coded,,,,,,,Deep Breathing,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,142887,SAME-AS
 Check for Hyperventilation symptoms during and after yoga,Shortness of breath?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Difficulty in breathing?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Cramps in Hands?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
+Check for Hyperventilation symptoms during and after yoga,Difficulty in breathing?,Misc,Coded,,,,,,,cramping of hands,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,155795,SAME-AS
+Check for Hyperventilation symptoms during and after yoga,Cramps in Hands?,Misc,Coded,,,,,,,Cold hands,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,144618,SAME-AS
 Check for Hyperventilation symptoms during and after yoga,Cold Hand or Feet?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
 Check for Hyperventilation symptoms during and after yoga,Tightness around mouth?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Palpitation on chest?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Anxiety?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Frequent Burping?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Frequent Yawning?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Tightness across Chest?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Bloated Sensation in stomach?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
-Check for Hyperventilation symptoms during and after yoga,Excessive Sweating?,Misc,Coded,,,,,,,,"Before,After,Before as well as after",,,,,,,,,,,,,,
+Check for Hyperventilation symptoms during and after yoga,Palpitation on chest?,Misc,Coded,,,,,,,Palpitations,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,130987,SAME-AS
+Check for Hyperventilation symptoms during and after yoga,Anxiety?,Misc,Coded,,,,,,,Anxiety State,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,121537,SAME-AS
+Check for Hyperventilation symptoms during and after yoga,Frequent Burping?,Misc,Coded,,,,,,,Burping,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,146621,SAME-AS
+Check for Hyperventilation symptoms during and after yoga,Frequent Yawning?,Misc,Coded,,,,,,,Yawning,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,122767,SAME-AS
+Check for Hyperventilation symptoms during and after yoga,Tightness across Chest?,Misc,Coded,,,,,,,Chest tightness,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,909,SAME-AS
+Check for Hyperventilation symptoms during and after yoga,Bloated Sensation in stomach?,Misc,Coded,,,,,,,Gas/bloating,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,150919,SAME-AS
+Check for Hyperventilation symptoms during and after yoga,Excessive Sweating?,Misc,Coded,,,,,,,Excessive Sweating,"Before,After,Before as well as after",,,,,,,,,,,,CIEL,140941,SAME-AS
 Check for Hyperventilation symptoms during and after yoga,Notes,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 5.6 Activities Of Manual Lymph Drainage Therapist,Name of oil used for IMLD,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 5.6 Activities Of Manual Lymph Drainage Therapist,Affected-Limb,Misc,Coded,,,,,,,,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,,,
@@ -519,9 +519,8 @@ Check for Hyperventilation symptoms during and after yoga,Notes,Misc,Text,,,,,,,
 5.6 Activities Of Manual Lymph Drainage Therapist,Describe compression Therapy plan for each day,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 5.6 Activities Of Manual Lymph Drainage Therapist,Affected Limb to be drained,Misc,Coded,,,,,,,,"Right-Limb,Left-Limb,Both limbs",,,,,,,,,,,,,,
 ,5.7 Describe the compression therapy plan for each day,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
- ,Stretch Bandage,Misc,Coded,,,,,,,,"Good,Not good",,,,,,,,,,,,,,
- ,Long stretch,Misc,Coded,,,,,,,,"Good,Not good",,,,,,,,,,,,,,
-,Toe compressions,Misc,Block,,,,,,"Stretch Bandage,Long stretch",,,,,,,,,,,,,,,,
+Toe compressions,Stretch Bandage,Misc,Coded,,,,,,,,"Good,Not good",,,,,,,,,,,,,,
+Toe compressions,Long stretch,Misc,Coded,,,,,,,,"Good,Not good",,,,,,,,,,,,,,
 Compression material used,Top grip,Misc,Coded,,,,,,,,"TG 15 cm,TG 10 cm,TG 8 cm",,,,,,,,,,,,,,
 Compression material used,Short stretch,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Wrapping the limb,Misc,Coded,,,,,,,,"Cotton Cloth,Top C net",,,,,,,,,,,,,,
@@ -531,9 +530,9 @@ Mould for Dekinking at folds,Sandwich Mould,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 MCR Mould,Shape,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 MCR Mould,Placement,Misc,Text,,,,,,,,"Foot Mould,R Mould,L Mould",,,,,,,,,,,,,,
 Position for bandaging,Bhekasana_,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-Position for bandaging,Straight leg raising,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-Position for bandaging,Lying Down,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-Position for bandaging,Standing up,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+Position for bandaging,Straight leg raising,Misc,Boolean,,,,,,,recumbent,,,,,,,,,,,,,CIEL,159633,SAME-AS
+Position for bandaging,Lying Down,Finding,Boolean,,,,,,,standing,,,,,,,,,,,,,CIEL,159632,SAME-AS
+Position for bandaging,Standing up,Finding,Boolean,,,,,,,,,,,,,,,,,,,,,,
 Position for bandaging,Any other position,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Toe Circulation testing,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,Changing of sponge moulds,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
@@ -561,7 +560,7 @@ Position for bandaging,Any other position,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 ,At discharge list,Misc,Block,,,,,,"List the entry point and treatment,ADLA care items",,,,,,,,,,,,,,,,
 ,6.2 Ask the patient to list the following,Misc,Block,,,,,,"At baseline list,At discharge list",,,,,,,,,,,,,,,,
 Patient Education table,Workshop Topic,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-Patient Education table,Date conducted,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+Patient Education table,Date conducted,Question,Text,,,,,,,Date of event,,,,,,,,,,,,,CIEL,160753,SAME-AS
 Patient Education table,Workshop name,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,6.3 Patient Education class,Misc,Block,,,,,,Patient Education table,,,,,,,,,,,,,,,,
 ,6 Patient Education workshops,Misc,Block,,,,,,"6. 1 Education on treatment,6.2 Ask the patient to list the following,6.3 Patient Education class",,,,,,,,,,,,,,,,
@@ -573,12 +572,12 @@ Patient Education table,Workshop name,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 7. Impression of Integrative Medical Team,IMLD2?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 7. Impression of Integrative Medical Team,Compression Therapy?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 7. Impression of Integrative Medical Team,Yoga Exercise?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-7. Impression of Integrative Medical Team,Any other impression?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
+7. Impression of Integrative Medical Team,Any other impression?,Finding,Boolean,,,,,,,Clinical impression comment,,,,,,,,,,,,,CIEL,159395,SAME-AS
 7. Impression of Integrative Medical Team,Approver,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Observation,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,Treatment,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+,Observation,Misc,Text,,,,,,,MEDICAL RECORD OBSERVATIONS,,,,,,,,,,,,,CIEL,1238,SAME-AS
+,Treatment,Misc,Text,,,,,,,planned treatment interruption,,,,,,,,,,,,,CIEL,1252,SAME-AS
 ,Examiner,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-,8. Observation & Discussion,Misc,Block,,,,,,"Observation,Treatment,Examiner",,,,,,,,,,,,,,,,
+,8. Observation & Discussion,Misc,Coded,,,,,,"Observation,Treatment,Examiner",,,,,,,,,,,,,,,,
 ,Limb Status,Misc,Coded,,,,,,,,"Right Lower limb,Left Lower limb,Bilateral Lower limb,Right Upper limb,Left Upper limb,Bilateral Upper limb,Genital",,,,,,,,,,,,,,
 ,Assessment type,Misc,Coded,,,,,,,,"Baseline,7th day,At Discharge,FU 1,FU 2,FU 3,FU 4,FU 5,FU 6,FU 7,FU 8",,,,,,,,,,,,,,
 ,Scores obtained,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
@@ -611,7 +610,7 @@ Asana-compliance,Reviewer - compliance,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 10. Patient Observations,Comorbidity,Misc,Coded,,,,,,"Right Lower limb,Left Lower limb,Bilateral Lower limb,Right Upper limb,Left Upper limb,Bilateral Upper limb,Genital",,,,,,,,,,,,,,,,
 10. Patient Observations,Observations,Misc,Coded,,,,,,"Baseline,7th day,At Discharge,FU 1,FU 2,FU 3,FU 4,FU 5,FU 6,FU 7,FU 8",,,,,,,,,,,,,,,,
 10. Patient Observations,Nursing Management,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-10. Patient Observations,Doctor's Advice,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+10. Patient Observations,Doctor's Advice,Procedure,Text,,,,,,,medical advice given,,,,,,,,,,,,,CIEL,159636,SAME-AS
 10. Patient Observations,Nurses notes ,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 10. Patient Observations,Evaluator,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Admission Document,Misc,Block,,,,,,"Part 1: Baseline Data,Part 2. Lymphatic Filariasis Specific Quality of Life Questionnaire (LFSQQ),Part 3. Patient Examination,Part 4. Locomotor changes,Part 5. Treatment Section,6 Patient Education workshops,7. Impression of Integrative Medical Team,8. Observation & Discussion,9. Yoga Assessment Sheet,10. Patient Observations",,,,,,,,,,,,,,,,
@@ -623,11 +622,11 @@ General Follow up,Whether bystander who was trained attended follow up?,Misc,Cod
 Phanta Soaking Churna,Which phanta churna you use?,Misc,Coded,,,,,,,,"Triphala,Yashtimadhu,Manjista,Sariva",,,,,,,,,,,,,,
 Phanta Soaking Churna,Grams per day,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 Phanta Soaking practice,Whether you are practicing phanta soaking daily?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
-Phanta Soaking practice,How many minutes a day?,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+Phanta Soaking practice,How many minutes a day?,Misc,Text,,,,,,,MINUTES,,,,,,,,,,,,,CIEL,1732,SAME-AS
 Phanta Soaking preparation,Gms of powder,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 Phanta Soaking preparation,Liter of water,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
 Phanta Soaking preparation,liter of luke warm water,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
-,Any changes observed?,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+,Any changes observed?,Diagnosis,Text,,,,,,,Changes in Skin Texture,,,,,,,,,,,,,CIEL,145758,SAME-AS
 ,Phanta Soaking Details,Misc,Block,,,,,,"Phanta Soaking Churna,Phanta Soaking practice,Phanta Soaking preparation,Any changes observed?",,,,,,,,,,,,,,,,
 Pre and post IMLD yoga,Are you practicing yoga regularly?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 Pre and post IMLD yoga,Pre IMLD yoga,Misc,Numeric,,,,,,,,,,,,,,,,,,,,,,
@@ -677,7 +676,7 @@ Ask patient to list entry points item,Team members observation/comments,Misc,Tex
 ,Ask patient to list entry points on their limbs,Misc,Block,,,,,,Ask patient to list entry points item,,,,,,,,,,,,,,,,
 Oral medication list,Are you taking any prescribed oral medication daily?,Misc,Coded,,,,,,,,"Yes,No,Not advised",,,,,,,,,,,,,,
 Oral medication item,Which medications have been prescribed,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
-Oral medication item,Dosage of the medications,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+Oral medication item,Dosage of the medications,Question,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Oral medication,Misc,Block,,,,,,"Oral medication list,Oral medication item",,,,,,,,,,,,,,,,
 Diet regulation,Are you following any?,Misc,Boolean,,,,,,,,,,,,,,,,,,,,,,
 Diet regulation,What are they,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
@@ -688,11 +687,11 @@ Observations of Counselor,Procedures practiced,Misc,Coded,,,,,,,,"Proper,Not pro
 Observations of Counselor,Knowledge level of treatment,Misc,Coded,,,,,,,,"Complete,Incomplete",,,,,,,,,,,,,,
 Observations of Counselor,Knowledge about BEP,Misc,Coded,,,,,,,,"100%,Less than 100%",,,,,,,,,,,,,,
 Observations of Counselor,Entry point care taken,Misc,Coded,,,,,,,,"Good,Not good",,,,,,,,,,,,,,
-Observations of Counselor,Patient compliance,Misc,Coded,,,,,,,,"Good,Not good",,,,,,,,,,,,,,
+Observations of Counselor,Patient compliance,Finding,Coded,,,,,,,,"Good,Not good",,,,,,,,,,,,CIEL,1252,SAME-AS
 Observations of Counselor,Any observation from patient for the changes in routing treatment,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 Observations of Counselor,Incharge Name,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,PART A,Misc,Block,,,,,,"Are you following all treatment procedures?,Phanta Soaking Details,Pre and post IMLD yoga,IMLD,Compression,Entry point care taken,Ask patient to list entry points on their limbs,Oral medication,Diet regulation,Problems/Complications,Benefit,Observations of Counselor",,,,,,,,,,,,,,,,
-Compression provider's observations,Patient compliance,Misc,Coded,,,,,,,,"Good,Not good",,,,,,,,,,,,,,
+Compression provider's observations,Patient compliance,Finding,Coded,,,,,,,,"Good,Not good",,,,,,,,,,,,,,
 Compression provider's observations,Compression method,Misc,Coded,,,,,,,,"Proper,Not proper",,,,,,,,,,,,,,
 Compression provider's observations,Cloth wrapping,Misc,Coded,,,,,,,,"Good,Not good",,,,,,,,,,,,,,
 Compression provider's observations,Compression material,Misc,Coded,,,,,,,,"Good,Not good",,,,,,,,,,,,,,
@@ -753,7 +752,7 @@ IMLD practice,Application of ointment,Misc,Coded,,,,,,,,"Applying,Not applying",
 IMLD practice,Comment by therapist,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 IMLD practice,Therapist name,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,PART D - IMLD Provider's Observations,Misc,Block,,,,,,IMLD practice,,,,,,,,,,,,,,,,
-Part E - Doctor's Observation,Observation,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
+Part E - Doctor's Observation,Observation,Question,Text,,,,,,,  MEDICAL RECORD OBSERVATIONS,MEDICAL RECORD OBSERVATIONS,,,,,,,,,,,,CIEL,1238,SAME-AS
 Part E - Doctor's Observation,Suggestions/Medicines prescribed,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 Part E - Doctor's Observation,Name,Misc,Text,,,,,,,,,,,,,,,,,,,,,,
 ,Follow Up Counseling Case Record,Misc,Block,,,,,,"General Follow up,PART A,PART B - Compression Provider's Observations,PARTC - Yoga Therapist's Observations,PART D - IMLD Provider's Observations,Part E - Doctor's Observation",,,,,,,,,,,,,,,,
