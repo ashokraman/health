@@ -42,7 +42,8 @@ def coded(row, writer, writer_ref, name, datatype, wcount, concept_list, cursor,
     Low_Normal  = row['Low Normal']
     Allow_Decimal  = row['Allow Decimal']
     locale  = row['locale']
-    synonym_1  = row['synonym.1']
+#    synonym_1  = row['synonym.1']
+    synonym_1  = ''
     reference_term_source  = row['reference-term-source']
     reference_term_code  = row['reference-term-code']
     reference_term_relationship  = row['reference-term-relationship']
@@ -84,7 +85,8 @@ def single(row, writer, writer_ref, name, datatype, wcount, concept_list, cursor
     Low_Normal  = row['Low Normal']
     Allow_Decimal  = row['Allow Decimal']
     locale  = row['locale']
-    synonym_1  = row['synonym.1']
+#    synonym_1  = row['synonym.1']
+    synonym_1  = ""
     reference_term_source  = row['reference-term-source']
     reference_term_code  = row['reference-term-code']
     reference_term_relationship  = row['reference-term-relationship']
