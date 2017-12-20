@@ -1,0 +1,80 @@
+uuid,name,description,class,datatype,shortname,synonym.1,synonym.2,synonym.3,answer.1,reference-term-source,reference-term-code,reference-term-relationship
+,Ulcerations,,Diagnosis,N/A,Ulcerations,,,,,IAD,7000,SAME-AS
+,Folliculitis,,Diagnosis,N/A,Folliculitis,,,,,IAD,7001,SAME-AS
+,Excoriations,,Diagnosis,N/A,Excoriations,,,,,IAD,7002,SAME-AS
+,Eczema:,,Diagnosis,N/A,Eczema:,,,,,IAD,7003,SAME-AS
+,Paronychia:,,Diagnosis,N/A,Paronychia:,,,,,IAD,7004,SAME-AS
+,Fissures/cracks in feet,,Diagnosis,N/A,Fissures/cracks in feet,,,,,IAD,7005,SAME-AS
+,Intertrigo - Interdigital:,,Diagnosis,N/A,Intertrigo - Interdigital:,,,,,IAD,7006,SAME-AS
+,Intertrigo - First:,,Diagnosis,N/A,Intertrigo - First:,,,,,IAD,7007,SAME-AS
+,Intertrigo - Second:,,Diagnosis,N/A,Intertrigo - Second:,,,,,IAD,7008,SAME-AS
+,Intertrigo - Third:,,Diagnosis,N/A,Intertrigo - Third:,,,,,IAD,7009,SAME-AS
+,Intertrigo - Fourth:,,Diagnosis,N/A,Intertrigo - Fourth:,,,,,IAD,7010,SAME-AS
+,Intertrigo - Between folds:,,Diagnosis,N/A,Intertrigo - Between folds:,,,,,IAD,7011,SAME-AS
+,Keratoderma:,,Diagnosis,N/A,Keratoderma:,,,,,IAD,7012,SAME-AS
+,Thickening of skin:,,Diagnosis,N/A,Thickening of skin:,,,,,IAD,7013,SAME-AS
+,Warty growth,,Diagnosis,N/A,Warty growth,,,,,IAD,7014,SAME-AS
+,Nodules presence,,Diagnosis,N/A,Nodules presence,,,,,IAD,7015,SAME-AS
+,Scars,,Diagnosis,N/A,Scars,,,,,IAD,7016,SAME-AS
+,Erythema,,Diagnosis,N/A,Erythema,,,,,IAD,7017,SAME-AS
+,Temperature on area of the redness,,Diagnosis,N/A,Temperature on area of the redness,,,,,IAD,7018,SAME-AS
+,Tenderness on erythema,,Diagnosis,N/A,Tenderness on erythema,,,,,IAD,7019,SAME-AS
+,Clinical evidence of cellulitis,,Diagnosis,N/A,Clinical evidence of cellulitis,,,,,IAD,7020,SAME-AS
+,Warmth on limb Sites,,Diagnosis,N/A,Warmth on limb Sites,,,,,IAD,7021,SAME-AS
+,Colour of the skin,,Diagnosis,N/A,Colour of the skin,,,,,IAD,7022,SAME-AS
+,Growth of hair,,Diagnosis,N/A,Growth of hair,,,,,IAD,7023,SAME-AS
+,Pain in the joints,,Diagnosis,N/A,Pain in the joints,,,,,IAD,7024,SAME-AS
+,Pain in the unaffected part of body,,Diagnosis,N/A,Pain in the unaffected part of body,,,,,IAD,7025,SAME-AS
+,Painful ulcers,,Diagnosis,N/A,Painful ulcers,,,,,IAD,7026,SAME-AS
+,Experience sense of failure,,Diagnosis,N/A,Experience sense of failure,,,,,IAD,7027,SAME-AS
+,Fear something bad might happen to you,,Diagnosis,N/A,Fear something bad might happen to you,,,,,IAD,7028,SAME-AS
+,Discouraged / tensed about the future,,Diagnosis,N/A,Discouraged / tensed about the future,,,,,IAD,7029,SAME-AS
+,Feeling neglected by friends and family members,,Diagnosis,N/A,Feeling neglected by friends and family members,,,,,IAD,7030,SAME-AS
+,Feeling lonely,,Diagnosis,N/A,Feeling lonely,,,,,IAD,7031,SAME-AS
+,Feeling tensed about your disease,,Diagnosis,N/A,Feeling tensed about your disease,,,,,IAD,7032,SAME-AS
+,Find it difficult in concentration & memory,,Diagnosis,N/A,Find it difficult in concentration & memory,,,,,IAD,7033,SAME-AS
+,Fever with chills and rigor,,Diagnosis,N/A,Fever with chills and rigor,,,,,IAD,7034,SAME-AS
+,Nausea and vomiting,,Diagnosis,N/A,Nausea and vomiting,,,,,IAD,7035,SAME-AS
+,Lymphadenitis,,Diagnosis,N/A,Lymphadenitis,,,,,IAD,7036,SAME-AS
+,Warmth,,Diagnosis,N/A,Warmth,,,,,IAD,7037,SAME-AS
+,Erythema,,Diagnosis,N/A,Erythema,,,,,IAD,7038,SAME-AS
+,Tenderness,,Diagnosis,N/A,Tenderness,,,,,IAD,7039,SAME-AS
+,Ruksha(Xerosis),,Diagnosis,N/A,Ruksha(Xerosis),,,,,IAD,7040,SAME-AS
+,Bahushopha pada(Dependant oedema of foot),,Diagnosis,N/A,Bahushopha pada(Dependant oedema of foot),,,,,IAD,7041,SAME-AS
+,Sphutana(Fissures),,Diagnosis,N/A,Sphutana(Fissures),,,,,IAD,7042,SAME-AS
+,Krishna(Black pigmentation),,Diagnosis,N/A,Krishna(Black pigmentation),,,,,IAD,7043,SAME-AS
+,Theevra Thoda or Arti or Animitta rujam(Pricking pain),,Diagnosis,N/A,Theevra Thoda or Arti or Animitta rujam(Pricking pain),,,,,IAD,7044,SAME-AS
+,Bahusho jwara(History of fever),,Diagnosis,N/A,Bahusho jwara(History of fever),,,,,IAD,7045,SAME-AS
+,Daha(Burning Sensation),,Diagnosis,N/A,Daha(Burning Sensation),,,,,IAD,7046,SAME-AS
+,Raktavarna(Redness),,Diagnosis,N/A,Raktavarna(Redness),,,,,IAD,7047,SAME-AS
+,Peetha varna(Yellow discolouration),,Diagnosis,N/A,Peetha varna(Yellow discolouration),,,,,IAD,7048,SAME-AS
+,Samsrava(Discharge),,Diagnosis,N/A,Samsrava(Discharge),,,,,IAD,7049,SAME-AS
+,Mrudu(Soft),,Diagnosis,N/A,Mrudu(Soft),,,,,IAD,7050,SAME-AS
+,Gurutwa(Heaviness),,Diagnosis,N/A,Gurutwa(Heaviness),,,,,IAD,7051,SAME-AS
+,Adhika shopha(Largely oedematus),,Diagnosis,N/A,Adhika shopha(Largely oedematus),,,,,IAD,7052,SAME-AS
+,Jwara yukta(Warmth of limb or fever),,Diagnosis,N/A,Jwara yukta(Warmth of limb or fever),,,,,IAD,7053,SAME-AS
+,Snigdha Snigdha varna(Oily/Shiny),,Diagnosis,N/A,Snigdha Snigdha varna(Oily/Shiny),,,,,IAD,7054,SAME-AS
+,Shwethabha(Whitish),,Diagnosis,N/A,Shwethabha(Whitish),,,,,IAD,7055,SAME-AS
+,Drudham/Sthiram(Organised),,Diagnosis,N/A,Drudham/Sthiram(Organised),,,,,IAD,7056,SAME-AS
+,Bahukanatakai parivrtam(With Nodules/warty growth),,Diagnosis,N/A,Bahukanatakai parivrtam(With Nodules/warty growth),,,,,IAD,7057,SAME-AS
+,Sthoola(Huge in size),,Diagnosis,N/A,Sthoola(Huge in size),,,,,IAD,7058,SAME-AS
+,Guru Gurutwamanisham(Feeling Of Heaviness),,Diagnosis,N/A,Guru Gurutwamanisham(Feeling Of Heaviness),,,,,IAD,7059,SAME-AS
+,Sheethanvitha(Cold to Touch),,Diagnosis,N/A,Sheethanvitha(Cold to Touch),,,,,IAD,7060,SAME-AS
+,Adhika shopha(Largely edematous),,Diagnosis,N/A,Adhika shopha(Largely edematous),,,,,IAD,7061,SAME-AS
+,Chest Pain,,Diagnosis,N/A,Chest Pain,,,,,IAD,7062,SAME-AS
+,Feeling Tensed,,Diagnosis,N/A,Feeling Tensed,,,,,IAD,7063,SAME-AS
+,Blurred Vision,,Diagnosis,N/A,Blurred Vision,,,,,IAD,7064,SAME-AS
+,Dizziness,,Diagnosis,N/A,Dizziness,,,,,IAD,7065,SAME-AS
+,Fast or deep Breathing,,Diagnosis,N/A,Fast or deep Breathing,,,,,IAD,7066,SAME-AS
+,Shortness of breath,,Diagnosis,N/A,Shortness of breath,,,,,IAD,7067,SAME-AS
+,Difficulty in breathing,,Diagnosis,N/A,Difficulty in breathing,,,,,IAD,7068,SAME-AS
+,Cramps in Hands,,Diagnosis,N/A,Cramps in Hands,,,,,IAD,7069,SAME-AS
+,Cold Hand or Feet,,Diagnosis,N/A,Cold Hand or Feet,,,,,IAD,7070,SAME-AS
+,Tightness around mouth,,Diagnosis,N/A,Tightness around mouth,,,,,IAD,7071,SAME-AS
+,Palpitation on chest,,Diagnosis,N/A,Palpitation on chest,,,,,IAD,7072,SAME-AS
+,Anxiety,,Diagnosis,N/A,Anxiety,,,,,IAD,7073,SAME-AS
+,Frequent Burping,,Diagnosis,N/A,Frequent Burping,,,,,IAD,7074,SAME-AS
+,Frequent Yawning,,Diagnosis,N/A,Frequent Yawning,,,,,IAD,7075,SAME-AS
+,Tightness across Chest,,Diagnosis,N/A,Tightness across Chest,,,,,IAD,7076,SAME-AS
+,Bloated Sensation in stomach,,Diagnosis,N/A,Bloated Sensation in stomach,,,,,IAD,7077,SAME-AS
+,Excessive Sweating,,Diagnosis,N/A,Excessive Sweating,,,,,IAD,7078,SAME-AS
